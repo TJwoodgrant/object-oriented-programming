@@ -1,0 +1,11 @@
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\bin\Debug\netcoreapp2.1\helloworld.deps.json
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\bin\Debug\netcoreapp2.1\helloworld.runtimeconfig.json
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\bin\Debug\netcoreapp2.1\helloworld.runtimeconfig.dev.json
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\bin\Debug\netcoreapp2.1\helloworld.dll
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\bin\Debug\netcoreapp2.1\helloworld.pdb
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\obj\Debug\netcoreapp2.1\helloworld.csprojAssemblyReference.cache
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\obj\Debug\netcoreapp2.1\helloworld.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\obj\Debug\netcoreapp2.1\helloworld.AssemblyInfoInputs.cache
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\obj\Debug\netcoreapp2.1\helloworld.AssemblyInfo.cs
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\obj\Debug\netcoreapp2.1\helloworld.dll
+C:\repos\object-oriented-programming\pt1.1\helloworld\helloworld\obj\Debug\netcoreapp2.1\helloworld.pdb
