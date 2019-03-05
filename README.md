@@ -8,14 +8,10 @@
 * Pt2.1 SwinGame Init
 * Pt3.1 SwinGame Drawing
 
----
-
-
-
-
-
 **TODO:**
 
 * [ ] Rework Pt1.2
 
 **Notes:**
+
+* PT2.2 Seems to be some sort of Design Document
