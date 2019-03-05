@@ -22,10 +22,19 @@ namespace MyGame
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
+
+                if (SwinGame.MouseClicked(MouseButton.LeftButton))
+                {
+                    myShape.X  = SwinGame.MousePosition().X;
+                    myShape.Y  = SwinGame.MousePosition().Y;
+                }
+
+
+
                 
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
-
+               
                 myShape.Draw();
 
                 SwinGame.DrawFramerate(0,0);

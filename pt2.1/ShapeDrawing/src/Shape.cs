@@ -94,8 +94,7 @@ namespace MyGame
 
         public bool IsAt(Rectangle rect, Point2D pt)
         {
-            // PointInRect doesn't seem to work? Odd.
-            return true; // for now.
+            return SwinGame.PointInRect(pt, rect);
         }
 
         
