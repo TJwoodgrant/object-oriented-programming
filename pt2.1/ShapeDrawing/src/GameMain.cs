@@ -29,6 +29,14 @@ namespace MyGame
                     myShape.Y  = SwinGame.MousePosition().Y;
                 }
 
+                if (SwinGame.KeyDown(KeyCode.SpaceKey))
+                {
+                    if (myShape.IsAt(SwinGame.MousePosition()))
+                    {
+                        myShape.Color = SwinGame.RandomRGBColor(255);
+                    }
+                }
+
 
 
                 

@@ -23,7 +23,6 @@ namespace MyGame
 
         }
 
-
         public Color Color
         {
             get
@@ -92,16 +91,10 @@ namespace MyGame
 
         }
 
-        public bool IsAt(Rectangle rect, Point2D pt)
+        public bool IsAt(Point2D pt)
         {
-            return SwinGame.PointInRect(pt, rect);
+            return SwinGame.PointInRect(pt, SwinGame.CreateRectangle(_x, _y, _width, _height));
         }
-
-        
-
-
-
-
 
     }
 }
