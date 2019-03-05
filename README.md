@@ -1,6 +1,6 @@
-# object-oriented-programming
+# Object Oriented Programming
 
-2019 S1 Hawthorn
+**COS20007 | 2019 S1 Hawthorn**
 
 ---
 
