@@ -7,7 +7,6 @@ namespace pt1._3
 
         static void PrintCounters(Counter[] counters)
         {
-            Counter c;
 
             foreach (Counter c in counters)
             {
@@ -17,7 +16,33 @@ namespace pt1._3
 
     static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Counter[] myCounters = new Counter[3];
+
+            myCounters[0] = new Counter("Counter 1");
+            myCounters[1] = new Counter("Counter 2");
+            myCounters[2] = myCounters[0];
+
+            for (int i = 0; i < 4; i++)
+            {
+                myCounters[0].Increment();
+            }
+
+            ; for (int i = 0; i < 9; i++)
+            {
+                myCounters[1].Increment();
+            }
+
+            PrintCounters(myCounters);
+            Console.WriteLine();
+
+            myCounters[2].Reset();
+
+            PrintCounters(myCounters);
+
+            Console.ReadLine();
+
+
+
         }
     }
 }

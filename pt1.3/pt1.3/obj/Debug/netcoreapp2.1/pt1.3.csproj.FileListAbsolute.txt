@@ -1,0 +1,11 @@
+C:\repos\object-oriented-programming\pt1.3\pt1.3\obj\Debug\netcoreapp2.1\pt1.3.csprojAssemblyReference.cache
+C:\repos\object-oriented-programming\pt1.3\pt1.3\obj\Debug\netcoreapp2.1\pt1.3.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\pt1.3\pt1.3\obj\Debug\netcoreapp2.1\pt1.3.AssemblyInfoInputs.cache
+C:\repos\object-oriented-programming\pt1.3\pt1.3\obj\Debug\netcoreapp2.1\pt1.3.AssemblyInfo.cs
+C:\repos\object-oriented-programming\pt1.3\pt1.3\bin\Debug\netcoreapp2.1\pt1.3.deps.json
+C:\repos\object-oriented-programming\pt1.3\pt1.3\bin\Debug\netcoreapp2.1\pt1.3.runtimeconfig.json
+C:\repos\object-oriented-programming\pt1.3\pt1.3\bin\Debug\netcoreapp2.1\pt1.3.runtimeconfig.dev.json
+C:\repos\object-oriented-programming\pt1.3\pt1.3\bin\Debug\netcoreapp2.1\pt1.3.dll
+C:\repos\object-oriented-programming\pt1.3\pt1.3\bin\Debug\netcoreapp2.1\pt1.3.pdb
+C:\repos\object-oriented-programming\pt1.3\pt1.3\obj\Debug\netcoreapp2.1\pt1.3.dll
+C:\repos\object-oriented-programming\pt1.3\pt1.3\obj\Debug\netcoreapp2.1\pt1.3.pdb

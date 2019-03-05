@@ -4,9 +4,9 @@
 
 ---
 
-* Pt1.3 in progress
-
-
+* Pt1.3 Main program done, need Ans sheet and diagram (What sort of diagram?).
+* Pt2.1 SwinGame Init
+* Pt3.1 SwinGame Drawing
 
 ---
 
@@ -14,9 +14,8 @@
 
 
 
-TODO:**
+**TODO:**
 
 * [ ] Rework Pt1.2
-* [ ] Pt1.3
 
 **Notes:**
