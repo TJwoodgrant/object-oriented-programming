@@ -20,3 +20,6 @@ written by mikanwolfe@nekox.net
 `ref` -- Two-way
 `out` -- Out-only
 
+## Notes
+
+* Constructor without parameters is called the **default constructor**
