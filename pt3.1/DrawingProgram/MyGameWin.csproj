@@ -37,8 +37,9 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
+    <Compile Include="src\Drawing.cs" />
     <Compile Include="src\Shape.cs" />
-    <Compile Include="src\GameMain.cs" />
+    <Compile Include="src\DrawingProgram.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

@@ -12,14 +12,20 @@ namespace MyGame
         private Color _color;
         private float _x, _y;
         private int _width, _height;
+        private bool _selected;
 
-        public Shape()
+        public Shape(int x, int y)
         {
             _color = Color.Green;
-            _x = 0;
-            _y = 0;
+            _x = x;
+            _y = y;
             _width = 100;
             _height = 100;
+
+        }
+
+        public Shape() : this(0, 0)
+        {
 
         }
 
@@ -83,12 +89,23 @@ namespace MyGame
             }
         }
 
+        public bool Selected { get => _selected; set => _selected = value; }
+
         public void Draw()
         {
+            if (Selected)
+                DrawOutline();
             SwinGame.FillRectangle(_color,
                                     _x, _y,
                                     _width, _height);
 
+        }
+
+         void DrawOutline()
+        {
+            SwinGame.FillRectangle(Color.Black,
+                                    _x-2, _y-2,
+                                    _width+2, _height+2);
         }
 
         public bool IsAt(Point2D pt)
