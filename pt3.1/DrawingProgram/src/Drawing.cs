@@ -42,7 +42,18 @@ namespace MyGame
         {
             foreach(Shape s in _shapes)
             {
-                s.Selected = s.IsAt(point);
+                s.Selected = (s.IsAt(point) | s.Selected) & !(s.IsAt(point) & s.Selected) ;
+            }
+        }
+
+        public void DeleteSelectedShapes()
+        {
+            foreach(Shape s in _shapes.ToList())
+            {
+                if (s.Selected)
+                {
+                    _shapes.Remove(s);
+                }
             }
         }
 
@@ -58,7 +69,7 @@ namespace MyGame
 
         public List<Shape> SelectedShapes()
         {
-            List<Shape> _selectedShapes = new List<Shape>;
+            List<Shape> _selectedShapes = new List<Shape>();
             foreach(Shape s in _shapes)
             {
                 if (s.Selected)

@@ -105,7 +105,7 @@ namespace MyGame
         {
             SwinGame.FillRectangle(Color.Black,
                                     _x-2, _y-2,
-                                    _width+2, _height+2);
+                                    _width+4, _height+4);
         }
 
         public bool IsAt(Point2D pt)

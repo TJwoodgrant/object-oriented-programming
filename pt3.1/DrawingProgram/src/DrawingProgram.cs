@@ -31,9 +31,19 @@ namespace MyGame
                    myDrawing.Background = SwinGame.RandomRGBColor(255);
                 }
 
-                //Step 19
+                if (SwinGame.KeyDown(KeyCode.DeleteKey)  || SwinGame.KeyDown(KeyCode.BackspaceKey))
+                {
+                    myDrawing.DeleteSelectedShapes();
+                }
 
-                
+                if (SwinGame.MouseClicked(MouseButton.RightButton))
+                {
+                    myDrawing.SelectShapesAt(SwinGame.MousePosition());
+                }
+
+
+
+
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
                
