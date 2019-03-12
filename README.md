@@ -6,25 +6,11 @@
 
 **For High Distinction**
 
-* Look into UML Class Diagrams
-* Design Patterns
-
-Observations:
-
-* Seems to be more about OOP and the smart use of objects as opposed to simply being complex.
+* Check out [nekox.net](https://nekox.net) for more information on research into this.
+  * I'll create a project page for it and hopefully be able to note down research into design patterns and my intentions for Artillery. 
+  * The project needs a name...
 
 ---
 
 
 
-* Pt1.3 Main program done, need Ans sheet and diagram (What sort of diagram?).
-* Pt2.1 SwinGame Init
-* Pt3.1 SwinGame Drawing
-
-**TODO:**
-
-* [ ] Rework Pt1.2
-
-**Notes:**
-
-* PT2.2 Seems to be some sort of Design Document
