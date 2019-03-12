@@ -1,6 +1,7 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using NUnit.Framework;
 
 namespace pt2._2
 {
@@ -20,7 +21,7 @@ namespace pt2._2
 
         public bool AreYou(string ident)
         {
-            return _identifiers.Contains(ident);
+            return _identifiers.Contains(ident.ToLower());
         }
 
         public string FirstID
@@ -34,5 +35,28 @@ namespace pt2._2
         }
 
 
+    }
+
+    [TestFixture]
+    class TestIdentifiableObject
+    {
+        IdentifiableObject io = new IdentifiableObject(new string[] {"person", "bob"});
+
+
+        [Test]
+        public void TestAreYou()
+        {
+            bool actual = io.AreYou("Person");
+
+            Assert.IsTrue(actual, "IO AreYou identifier found");
+        }
+
+        [Test]
+        public void TestNotAreYou()
+        {
+            bool actual = io.AreYou("Sally");
+
+            Assert.IsFalse(actual, "IO Not Are You");
+        }
     }
 }

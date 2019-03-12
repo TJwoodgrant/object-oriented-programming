@@ -9,3 +9,6 @@ C:\repos\object-oriented-programming\pt2.2\pt2.2\pt2.2\obj\Debug\netcoreapp2.1\p
 C:\repos\object-oriented-programming\pt2.2\pt2.2\pt2.2\bin\Debug\netcoreapp2.1\pt2.2.pdb
 C:\repos\object-oriented-programming\pt2.2\pt2.2\pt2.2\obj\Debug\netcoreapp2.1\pt2.2.dll
 C:\repos\object-oriented-programming\pt2.2\pt2.2\pt2.2\obj\Debug\netcoreapp2.1\pt2.2.pdb
+C:\repos\object-oriented-programming\pt2.2\pt2.2\pt2.2\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\repos\object-oriented-programming\pt2.2\pt2.2\pt2.2\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\repos\object-oriented-programming\pt2.2\pt2.2\pt2.2\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
