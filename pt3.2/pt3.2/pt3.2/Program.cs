@@ -7,9 +7,17 @@ namespace pt3._2
     {
         static void Main(string[] args)
         {
+            Clock myClock = new Clock();
             Console.WriteLine("Hello World!");
-            Thread.Sleep(500);
-            Console.Clear();
+
+            while (true)
+            {
+                Thread.Sleep(100);
+                Console.Clear();
+                myClock.Tick();
+                myClock.PrintTime();
+            }
+        
         }
     }
 }
