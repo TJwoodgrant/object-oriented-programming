@@ -7,111 +7,44 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Shape
+    public abstract class Shape
     {
         private Color _color;
-        private float _x, _y;
-        private int _width, _height;
+        protected float _x, _y;
         private bool _selected;
 
-        public Shape(int x, int y)
-        {
-            _color = Color.Green;
-            _x = x;
-            _y = y;
-            _width = 100;
-            _height = 100;
 
-        }
-
-        public Shape() : this(0, 0)
-        {
-
-        }
 
         public Color Color
         {
-            get
-            {
-                return _color;
-            }
-            set
-            {
-                _color = value;
-            }
+            get => _color;
+            set => _color = value;
         }
 
         public float X
         {
-            get
-            {
-                return _x;
-            }
-            set
-            {
-                _x = value;
-            }
+            get => _x;
+            set => _x = value;
         }
 
         public float Y
         {
-            get
-            {
-                return _y;
-            }
-            set
-            {
-                _y = value;
-            }
+            get => _y;
+            set => _y = value;
         }
 
-        public int Width
+
+        public bool Selected
         {
-            get
-            {
-                return _width;
-            }
-            set
-            {
-                _width = value;
-            }
+            get => _selected;
+            set => _selected = value;
         }
 
-        public int Height
-        {
-            get
-            {
-                return _height;
-            }
-            set
-            {
-                _height = value;
-            }
-        }
+        public abstract void Draw();
 
-        public bool Selected { get => _selected; set => _selected = value; }
+        public abstract void DrawOutline();
 
-        public void Draw()
-        {
-            if (Selected)
-                DrawOutline();
-            SwinGame.FillRectangle(_color,
-                                    _x, _y,
-                                    _width, _height);
-
-        }
-
-         void DrawOutline()
-        {
-            SwinGame.FillRectangle(Color.Black,
-                                    _x-2, _y-2,
-                                    _width+4, _height+4);
-        }
-
-        public bool IsAt(Point2D pt)
-        {
-            return SwinGame.PointInRect(pt, SwinGame.CreateRectangle(_x, _y, _width, _height));
-        }
+        public abstract bool IsAt(Point2D pt);
 
     }
 }

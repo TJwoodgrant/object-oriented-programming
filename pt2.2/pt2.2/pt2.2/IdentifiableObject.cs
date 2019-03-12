@@ -58,5 +58,32 @@ namespace pt2._2
 
             Assert.IsFalse(actual, "IO Not Are You");
         }
+
+        [Test]
+        public void TestCaseSensitive()
+        {
+            bool actual = io.AreYou("PERSON");
+
+            Assert.IsTrue(actual, "IO Case Sensitive AreYou");
+        }
+
+        [Test]
+        public void TestFirstID()
+        {
+            string actual = io.FirstID;
+
+            Assert.AreEqual("person", actual, "IO Test First ID to be person");
+
+        }
+
+        [Test]
+        public void TestAddID()
+        {
+            io.AddIdentifier("bob");
+
+            bool actual = io.AreYou("bob");
+
+            Assert.IsTrue(actual, "IO Test Bob has been added");
+        }
     }
 }
