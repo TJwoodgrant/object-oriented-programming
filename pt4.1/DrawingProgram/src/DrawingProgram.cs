@@ -5,12 +5,23 @@ namespace MyGame
 {
     public class DrawingProgram
     {
+
+        private enum ShapeKind
+        {
+            Rectangle,
+            Circle,
+            Line
+        }
+
+
         public static void Main()
         {
             //Open the game window
             SwinGame.OpenGraphicsWindow("DrawingProgram", 1600, 900);
             SwinGame.ShowSwinGameSplashScreen();
 
+
+            ShapeKind kindToAdd = ShapeKind.Circle;
 
             Drawing myDrawing = new Drawing();
 
@@ -23,7 +34,48 @@ namespace MyGame
 
                 if (SwinGame.MouseClicked(MouseButton.LeftButton))
                 {
-                    myDrawing.AddShape(new Shape((int)SwinGame.MousePosition().X, (int)SwinGame.MousePosition().Y));
+                    Shape newShape;
+                    int x = (int)SwinGame.MouseX();
+                    int y = (int)SwinGame.MouseY();
+
+                    if (kindToAdd == ShapeKind.Circle)
+                    {
+                        Circle newCircle = new Circle();
+                        newCircle.X = x;
+                        newCircle.Y = y;
+                        newShape = newCircle;
+                    }
+                    else if (kindToAdd == ShapeKind.Line)
+                    {
+                        Line newLine = new Line();
+                        newLine.X = x;
+                        newLine.Y = y;
+                        newShape = newLine;
+                    } else
+                    {
+                        Rectangle newRect = new Rectangle();
+                        newRect.X = x;
+                        newRect.Y = y;
+                        newShape = newRect;
+                    }
+
+                    myDrawing.AddShape(newShape);
+                }
+
+
+                if(SwinGame.KeyDown(KeyCode.LKey))
+                {
+                    kindToAdd = ShapeKind.Line;
+                }
+
+                if (SwinGame.KeyDown(KeyCode.RKey))
+                {
+                    kindToAdd = ShapeKind.Rectangle;
+                }
+
+                if (SwinGame.KeyDown(KeyCode.CKey))
+                {
+                    kindToAdd = ShapeKind.Circle;
                 }
 
                 if (SwinGame.KeyDown(KeyCode.SpaceKey))

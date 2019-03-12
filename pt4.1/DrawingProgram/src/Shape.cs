@@ -10,7 +10,7 @@ namespace MyGame
     public abstract class Shape
     {
         private Color _color;
-        protected float _x, _y;
+        private float _x, _y;
         private bool _selected;
 
 

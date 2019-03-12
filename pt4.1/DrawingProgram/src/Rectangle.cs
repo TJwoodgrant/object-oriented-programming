@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SwinGameSDK;
 
-namespace MyGame.src
+namespace MyGame
 {
     class Rectangle : Shape
     {
@@ -13,23 +13,37 @@ namespace MyGame.src
 
         public Rectangle(int x, int y)
         {
-            _x = x;
+            this.X = x;
+            this.Y = y;
+            this.Color = Color.Green;
+            _width = 100;
+            _height = 100;
 
+        }
+        
+        public Rectangle() : this(0, 0)
+        {
         }
 
         public override void Draw()
         {
-            throw new NotImplementedException();
+            if (Selected)
+                DrawOutline();
+            SwinGame.FillRectangle(this.Color,
+                                    this.X, this.Y,
+                                    _width, _height);
         }
 
         public override void DrawOutline()
         {
-            throw new NotImplementedException();
+            SwinGame.FillRectangle(Color.Black,
+                                    this.X - 2, this.Y - 2,
+                                    _width + 4, _height + 4);
         }
 
         public override bool IsAt(Point2D pt)
         {
-            throw new NotImplementedException();
+            return SwinGame.PointInRect(pt, SwinGame.CreateRectangle(this.X, this.Y, _width, _height));
         }
     }
 }
