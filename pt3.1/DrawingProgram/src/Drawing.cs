@@ -43,6 +43,7 @@ namespace MyGame
             foreach(Shape s in _shapes)
             {
                 s.Selected = (s.IsAt(point) | s.Selected) & !(s.IsAt(point) & s.Selected) ;
+                //s.Selected = s.IsAt(point) | s.Selected
             }
         }
 

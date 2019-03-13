@@ -93,7 +93,7 @@ namespace MyGame
 
         public bool IsAt(Point2D pt)
         {
-            return SwinGame.PointInRect(pt, SwinGame.CreateRectangle(_x, _y, _width, _height));
+            return SwinGame.PointInRect(pt, _x, _y, _width, _height);
         }
 
     }
