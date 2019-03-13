@@ -17,8 +17,8 @@ namespace pt2._2
 
         // TODO: Fix to format later
 
-        public string ShortDescription { get => "a " + this.FirstID + " " + _name;  }
-        virtual public string LongDescription { get =>  "LongDesc: " +_name;  }
+        public string ShortDescription { get => "a " + _name + " " + this.FirstID;  }
+        virtual public string LongDescription { get =>  _description;  }
 
     }
 }

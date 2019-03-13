@@ -15,6 +15,11 @@ namespace pt2._2
             //inventory
         }
 
+        public override string LongDescription
+        {
+            get => "A simple player. Just Monika.";
+        }
+
         public GameObject Locate(string id)
         {
             return null;
