@@ -4,13 +4,15 @@ using System.Text;
 
 namespace pt2._2
 {
-    abstract class Command
+    abstract class Command : IdentifiableObject
     {
-        public Command(string[] ids)
+        public Command(string[] ids) :
+            base(ids)
         {
 
         }
 
-        public abstract string Execute(Player p, string[] text) ; 
+        public abstract string Execute(Player p, string[] text);
+
     }
 }

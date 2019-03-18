@@ -1,0 +1,122 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using NUnit.Framework;
+
+namespace pt2._2
+{
+    class Look : Command
+    {
+
+        public Look() :
+            base(new string[] {"look"})
+        {
+
+        }
+
+        public override string Execute(Player p, string[] text)
+        {
+            if (text[0].ToLower() != "look")
+                return "Error in look input.";
+
+            if (text[1].ToLower() != "at")
+                return "What do you want to look at?";
+
+            if (text.Length == 5)
+            {
+                if (text[3] != "in")
+                {
+                    return "What do you want to look in?";
+                }
+            }
+
+            IHaveInventory _container;
+
+            switch (text.Length)
+            {
+                case 3:
+                    _container = p as IHaveInventory;
+                    break;
+
+                case 5:
+                    _container = FetchContainer(p, text[4]);
+                    break;
+
+                default:
+                    _container = null;
+                    break;
+            }
+
+            string _itemid = text[2];
+            return LookAtIn(_itemid, _container);
+            
+        }
+
+        private IHaveInventory FetchContainer(Player p, string containerId)
+        {
+            return p.Inventory.Fetch(containerId) as IHaveInventory;
+        }
+
+        private string LookAtIn(string thingId, IHaveInventory container)
+        {
+            if (container == null)
+                return "Could not find inventory.";
+            return container.Locate(thingId).LongDescription;
+        }
+    }
+
+
+    [TestFixture]
+    class TestLookCommand
+    {
+
+        Command l;
+        Player p;
+        Bag b1 = new Bag(new string[] { "small", "cloth", "bag" }, "bag", "A small cloth bag");
+        Bag b2 = new Bag(new string[] { "medium", "leather", "bag" }, "bag", "A medium-sized bag. For newbies.");
+
+        Item redPot = new Item(new string[] { "potion" }, "red", "A bitter-smelling red potion.");
+        Item whitePot = new Item(new string[] { "potion" }, "white", "A viscous white fluid. Reminds you of PLA glue, smells like it too.");
+        Item Gem = new Item(new string[] { "gem"}, "phosphophyllite", "An emerald-green gem of about 4-and-a-half hardness. Pretty.");
+
+        [Test]
+        public void TestLookAtMe()
+        {
+            p = new Player("MC", "The player");
+            l = new Look();
+
+            string expected = "You are MC, a mere shadow in the literature club.";
+            string actual = l.Execute(p, new string[] { "look", "at", "inventory"});
+
+            Assert.AreEqual(expected, actual, "TestLookCommand can look for 'inventory' and returns player long description");
+            
+        }
+
+        [Test]
+        public void TestLookAtGem()
+        {
+            p = new Player("MC", "The player");
+            p.Inventory.Put(Gem);
+            l = new Look();
+
+            string expected = "An emerald-green gem of about 4-and-a-half hardness. Pretty.";
+            string actual = l.Execute(p, new string[] { "look", "at", "gem" });
+
+            Assert.AreEqual(expected, actual,"TestLookCommand for gem player inventory, should return long desc for gem.");
+        }
+
+        [Test]
+        public void TestLookAtUnknown()
+        {
+            p = new Player("MC", "The player");
+            l = new Look();
+
+            string expected = "An emerald-green gem of about 4-and-a-half hardness. Pretty.";
+            string actual = l.Execute(p, new string[] { "look", "at", "gem" });
+
+            Assert.AreEqual(expected, actual, "TestLookCommand for gem player inventory, should return long desc for gem.");
+        }
+
+    }
+
+}

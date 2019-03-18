@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace pt2._2
 {
-    class Player : GameObject
+    class Player : GameObject, IHaveInventory
     {
 
         Inventory _inventory;

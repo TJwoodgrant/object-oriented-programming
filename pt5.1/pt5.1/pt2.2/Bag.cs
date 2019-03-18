@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace pt2._2
 {
-    class Bag : Item
+    class Bag : Item, IHaveInventory
     {
         Inventory _inventory;
 
