@@ -16,11 +16,24 @@ namespace pt2._2
 
         public override string Execute(Player p, string[] text)
         {
-            if ((text.Length < 3) || (text.Length == 4))
-                return "Error in look input.";
+            string error = "Error in look input.";
+            if (text.Length == 4 )
+                return error;
+
+            if ((text.Length == 1) && text[0].ToLower() != "look")
+            {
+                return error;
+            }
+            else
+            {
+                //TODO: LOOK SHOULD LOCATE ROOM
+            }
+
+
+
 
             if (text[0].ToLower() != "look")
-                return "Error in look input.";
+                return "error";
 
             if (text[1].ToLower() != "at")
                 return "What do you want to look at?";

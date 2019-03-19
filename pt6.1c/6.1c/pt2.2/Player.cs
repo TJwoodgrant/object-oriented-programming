@@ -9,6 +9,7 @@ namespace pt2._2
     {
 
         Inventory _inventory;
+        Location _location;
 
         public Player(string name, string desc) :
             base(new string[] { "me", "inventory" }, name, desc)
@@ -26,8 +27,15 @@ namespace pt2._2
             if (this.AreYou(id))
                 return this;
 
-            return _inventory.Fetch(id);
+            GameObject obj = _inventory.Fetch(id);
+            if (obj != null)
+                return obj;
+
+            obj = _location.Locate(id);
+            return obj;
         }
+
+        public Location Location{ get => _location; set => _location = value;  }
 
         public Inventory Inventory { get => _inventory; }
 
