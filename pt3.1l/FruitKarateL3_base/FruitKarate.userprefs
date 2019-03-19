@@ -1,0 +1,17 @@
+﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="21/03/2016 3:32:27 AM" StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Fruit.cs">
+    <Files>
+      <File FileName="src/FruitKarate.cs" Line="42" Column="29" />
+      <File FileName="src/Fruit.cs" Line="22" Column="29" />
+      <File FileName="src/GameMain.cs" Line="34" Column="39" />
+      <File FileName="src/FruitKind.cs" Line="10" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.FruitKarate PreferredExecutionTarget="Test1" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
