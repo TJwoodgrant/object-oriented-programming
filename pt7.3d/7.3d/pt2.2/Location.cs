@@ -9,12 +9,23 @@ namespace pt2._2
     {
 
         Inventory _inventory;
+        List<Path> _paths;
+        //new Dictionary<CardinalDirection, Path> _paths;
+        //TODO: Enum for each diretion + dictionary to key->path
 
 
         public Location(string name, string desc) :
             base(new string[] {"location", "place", "room" }, name, desc)
         {
             _inventory = new Inventory();
+            _paths = new List<Path>();
+
+        }
+
+        public Location(string name, string desc, List<Path> paths):
+            this(name, desc)
+        {
+            _paths = paths;
 
         }
 
@@ -26,8 +37,33 @@ namespace pt2._2
             return _inventory.Fetch(id);
         }
 
+        public void AddPath(Path path)
+        {
+            _paths.Add(path);
+        }
+
+        public string PathList
+        {
+            get
+            {
+                string list = string.Empty;
+                foreach (Path p in _paths)
+                {
+                    list = list + p.ShortDescription;
+                }
+
+                return list;
+            }
+        }
+
+        public override string ShortDescription { get => "You are in a " + Name; }
+
+        public override string LongDescription { get => base.LongDescription + PathList}
+
 
         public Inventory Inventory { get => _inventory; }
+
+        
 
     }
 

@@ -28,7 +28,30 @@ namespace pt2._2
             ConsoleColor originalColor = Console.ForegroundColor;
             Console.ForegroundColor = color;
             Console.Write(text);
+            
             Console.ForegroundColor = originalColor;
+        }
+
+        public static void WriteColored(string[] messages, ConsoleColor[] colors)
+        {
+            ConsoleColor originalColor = Console.ForegroundColor;
+
+            if (messages.Length != colors.Length)
+                throw new InvalidOperationException("Arrays of string and color must be of length to match!");
+
+            for (int i = 0; i < messages.Length; i++)
+            {
+                Console.ForegroundColor = colors[i];
+                Console.Write(messages[i]);
+                Console.ForegroundColor = originalColor;
+            }
+            
+        }
+
+        public static void WriteColoredLine(string[] messages, ConsoleColor[] colors)
+        {
+            WriteColored(messages, colors);
+            Console.WriteLine();
         }
 
         static void Main(string[] args)
@@ -38,14 +61,23 @@ namespace pt2._2
 
             Console.WriteLine();
 
-            Console.Write("Welcome to ");
-            ColoredConsoleWrite(ConsoleColor.Red, "Nightmaher");
-            Console.WriteLine(".");
+            WriteColoredLine(new string[]
+                {
+                    "Welcome to ",
+                    "Nightmaher!"
+                }, new ConsoleColor[] {
+                    Console.ForegroundColor,
+                    ConsoleColor.Red
+                }
+            );
 
-            Console.WriteLine();
-            ColoredConsoleWrite(ConsoleColor.DarkGray, "   yes, there are a lot of obscure references.");
-            Console.WriteLine();
-            Console.WriteLine();
+            WriteColoredLine(new string[]
+                {
+                    "The story of eternal rest. \r\n "
+                }, new ConsoleColor[] {
+                    ConsoleColor.DarkGray,
+                }
+            );
 
             Console.WriteLine("This is version 0.6.1 'Nightmare-themed Maze. Happy. Hapy.' | Iteration 7 in progress ");
             Console.WriteLine();
