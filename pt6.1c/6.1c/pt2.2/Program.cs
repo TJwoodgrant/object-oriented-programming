@@ -34,6 +34,8 @@ namespace pt2._2
         static void Main(string[] args)
         {
 
+            string _input;
+
             Console.WriteLine();
 
             Console.Write("Welcome to ");
@@ -52,7 +54,7 @@ namespace pt2._2
             Console.WriteLine("How would you describe yourself? (e.g. 'A mighty programmer')");
             string description = Console.ReadLine() + "!";
             Console.WriteLine();
-            Console.WriteLine(name + ", " + description + " It is time to leave the lecture and dive into the land of Disbo-- SwinAdventure!");
+            Console.WriteLine(name + ", " + description + " It is time to leave the lecture and fall into the world of nightmares.");
             Console.WriteLine();
 
             Player player = new Player(name, description);
@@ -64,7 +66,7 @@ namespace pt2._2
             Item woodblade = new Item(new string[] { "blade" }, "wooden", "A mighty-fine wooden training sword. Beware of termites.");
             Item teaTable = new Item(new string[] { "table" }, "tea", "A tea table lined with an odd antique tablecloth with seemingly infinite supplies of tea and sweets. " +
                 "Four chairs surround the table at each edge. Centre-table is a vase of more blood-red roses, the sight of which seems mesmerising. ");
-            Location teaRoom = new Location("Fancy Tea Room", "A fancy room decorated with odd colours of an antique design. Definitely not to your liking. " +
+            Location teaRoom = new Location("Fancy Tea Room", "You're in a fancy room decorated with odd colours of an antique design. Definitely not to your liking. " +
                 "There are sweets and tea on the table of seemingly infinite supply; a large door overtaken by roses dominates the wall to your right. " +
                 "\r\nA dizzying sweet scent starts to fills the room, your gut tells you it's a bad omen. After all, the scent is coming from the blood-red roses. ");
 
@@ -77,12 +79,25 @@ namespace pt2._2
             player.Inventory.Put(bag);
             bag.Inventory.Put(woodblade);
 
+            Command l = new Look();
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+
             while (true)
             {
-                Command l = new Look();
-                Console.WriteLine();
+
                 Console.Write("Command--> ");
-                Console.WriteLine(l.Execute(player, Console.ReadLine().Split()));
+
+                ConsoleColor originalColor = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Gray;
+
+                
+                _input = Console.ReadLine();
+
+                Console.ForegroundColor = originalColor;
+
+                Console.WriteLine();
+                ColoredConsoleWrite(ConsoleColor.Cyan,(l.Execute(player, _input.Split())));
+                Console.WriteLine();
                 Console.WriteLine();
             }
         }

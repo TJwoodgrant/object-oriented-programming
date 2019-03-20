@@ -7,14 +7,16 @@ namespace pt3._2
 {
     public class Counter
     {
-        private int _count;
+        private int _value;
+        private string _name;
 
-        public Counter()
+        public Counter(string name)
         {
+            _name = name;
             Count = 0;
         }
 
-        public int Count { get => _count; set => _count = value; }
+        public int Count { get => _value; set => _value = value; }
 
         public void Increment()
         {
@@ -38,7 +40,7 @@ namespace pt3._2
         [Test]
         public void TestCounterCreation()
         {
-            c = new Counter();
+            c = new Counter("name");
 
             Assert.AreEqual(0, c.Count, "TestCounterCreation Counter should be 0 at startup");
         }
@@ -46,7 +48,7 @@ namespace pt3._2
         [Test]
         public void TestCounterIncrement()
         {
-            c = new Counter();
+            c = new Counter("name");
             c.Increment();
 
             Assert.AreEqual(1, c.Count, "TestCounterIncrement Counter should be 1 after increment");
@@ -55,7 +57,7 @@ namespace pt3._2
         [Test]
         public void TestCounterReset()
         {
-            c = new Counter();
+            c = new Counter("name");
             c.Increment();
             c.Reset();
 

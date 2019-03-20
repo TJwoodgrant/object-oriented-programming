@@ -15,7 +15,7 @@ namespace pt3._2
             _counters = new List<Counter>();
             for(int i = 0; i < 3; i++)
             {
-                _counters.Add(new Counter());
+                _counters.Add(new Counter("Counter" + i.ToString()));
             }
                 
         }
