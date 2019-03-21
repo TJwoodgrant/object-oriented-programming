@@ -14,6 +14,16 @@ namespace pt2._2
 
         }
 
+        bool ContainsString(string searched, string[] value)
+        {
+            foreach (string s in value)
+            {
+                if (searched.Contains(s))
+                    return true;
+            }
+            return false;
+        }
+
         public override string Execute(Player p, string[] text)
         {
 
@@ -35,6 +45,19 @@ namespace pt2._2
                     _container = p as IHaveInventory;
                     _itemid = "room";
                     break;
+
+                case 2:
+                    if (ContainsString(text[1].ToLower(), new string[] {"north",
+                        "south", "east", "west" }))
+                    {
+                        _itemid = text[1];
+                        _container = p as IHaveInventory;
+                    } else
+                    {
+                        return error;
+                    }
+                    break;
+
                 case 3:
                     if (text[1].ToLower() != "at")
                         return "What do you want to look at?";

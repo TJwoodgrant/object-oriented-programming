@@ -10,7 +10,6 @@ namespace pt2._2
 
         Inventory _inventory;
         List<Path> _paths;
-        //new Dictionary<CardinalDirection, Path> _paths;
         //TODO: Enum for each diretion + dictionary to key->path
 
 
@@ -19,7 +18,6 @@ namespace pt2._2
         {
             _inventory = new Inventory();
             _paths = new List<Path>();
-
         }
 
         public Location(string name, string desc, List<Path> paths):
@@ -34,6 +32,12 @@ namespace pt2._2
             if (this.AreYou(id))
                 return this;
 
+            foreach(Path p in _paths)
+            {
+                if (p.AreYou(id))
+                    return p;
+            }
+
             return _inventory.Fetch(id);
         }
 
@@ -42,15 +46,34 @@ namespace pt2._2
             _paths.Add(path);
         }
 
+
         public string PathList
         {
             get
             {
-                string list = string.Empty;
-                foreach (Path p in _paths)
+                string list = string.Empty + "\r\n\n";
+
+
+                if (_paths.Count == 1)
                 {
-                    list = list + p.ShortDescription;
+                    return "\r\n\nThere is an exit to the " + _paths[0].FirstID + ".";
                 }
+
+                list = list + "There are exits to the ";
+
+                for (int i = 0; i < _paths.Count; i++)
+                {
+
+                    if (i == _paths.Count - 1)
+                    {
+                        list = list + "and " + _paths[i].FirstID + ".";
+                    } else
+                    {
+                        list = list + _paths[i].FirstID + ", ";
+                    }
+                }
+
+               
 
                 return list;
             }
@@ -58,7 +81,7 @@ namespace pt2._2
 
         public override string ShortDescription { get => "You are in a " + Name; }
 
-        public override string LongDescription { get => base.LongDescription + PathList}
+        public override string LongDescription { get => base.LongDescription + PathList; }
 
 
         public Inventory Inventory { get => _inventory; }

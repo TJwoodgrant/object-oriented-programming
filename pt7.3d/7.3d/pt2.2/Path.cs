@@ -9,20 +9,30 @@ namespace pt2._2
 
         bool _isBlocked;
 
+        Location _source, _destination;
+
         public Path(string[] idents, string name, string desc, Location source, Location destination):
             base(idents, name, desc)
         {
-            AddIdentifier("Path");
+            AddIdentifier("path");
+            foreach (string s in name.Split(" "))
+            {
+                AddIdentifier(s);
+            }
             _isBlocked = false;
 
-            source.AddPath(this);
-            destination.AddPath(this);
+            _source = source;
+            _destination = destination;
+
 
         }
 
+        public Location Destination { get => _destination;  }
+
+
         public override string ShortDescription
         {
-            get => "You travel down a " + Name;
+            get => Name;
         }
 
         public bool IsBlocked { get => _isBlocked; set => value = _isBlocked; }

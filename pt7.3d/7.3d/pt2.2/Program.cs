@@ -23,6 +23,21 @@ namespace pt2._2
     class Program
     {
 
+        public static void WriteColoredLine(string message, ConsoleColor color)
+        {
+            WriteColored(message, color);
+            Console.WriteLine();
+        }
+
+
+        public static void WriteColored(string message, ConsoleColor color)
+        {
+            ConsoleColor originalColor = Console.ForegroundColor;
+            Console.ForegroundColor = color;
+            Console.Write(message);
+            Console.ForegroundColor = originalColor;
+        }
+
         public static void ColoredConsoleWrite(ConsoleColor color, string text) // Turn this into an extension class.
         {
             ConsoleColor originalColor = Console.ForegroundColor;
@@ -34,16 +49,13 @@ namespace pt2._2
 
         public static void WriteColored(string[] messages, ConsoleColor[] colors)
         {
-            ConsoleColor originalColor = Console.ForegroundColor;
 
             if (messages.Length != colors.Length)
                 throw new InvalidOperationException("Arrays of string and color must be of length to match!");
 
             for (int i = 0; i < messages.Length; i++)
             {
-                Console.ForegroundColor = colors[i];
-                Console.Write(messages[i]);
-                Console.ForegroundColor = originalColor;
+                WriteColored(messages[i], colors[i]);
             }
             
         }
@@ -57,39 +69,11 @@ namespace pt2._2
         static void Main(string[] args)
         {
 
-            string _input;
-
-            Console.WriteLine();
-
-            WriteColoredLine(new string[]
-                {
-                    "Welcome to ",
-                    "Nightmaher!"
-                }, new ConsoleColor[] {
-                    Console.ForegroundColor,
-                    ConsoleColor.Red
-                }
-            );
-
-            WriteColoredLine(new string[]
-                {
-                    "The story of eternal rest. \r\n "
-                }, new ConsoleColor[] {
-                    ConsoleColor.DarkGray,
-                }
-            );
-
-            Console.WriteLine("This is version 0.6.1 'Nightmare-themed Maze. Happy. Hapy.' | Iteration 7 in progress ");
-            Console.WriteLine();
-            Console.WriteLine("What is your name?");
-            string name = Console.ReadLine();
-            Console.WriteLine("How would you describe yourself? (e.g. 'A mighty programmer')");
-            string description = Console.ReadLine() + "!";
-            Console.WriteLine();
-            Console.WriteLine(name + ", " + description + " It is time to leave the lecture and fall into the world of nightmares.");
-            Console.WriteLine();
-
-            Player player = new Player(name, description);
+            string _input, _output;
+            ConsoleColor _sysCol = ConsoleColor.DarkGray;
+            ConsoleColor _norCol = ConsoleColor.Gray;
+            ConsoleColor _txtCol = ConsoleColor.Cyan;
+            ConsoleColor _redCol = ConsoleColor.DarkRed;
 
             Bag bag = new Bag(new string[] { "small", "cloth", "bag" }, "bag", "A small cloth bag endorned with a 6-petal star atop a circle.");
 
@@ -102,7 +86,61 @@ namespace pt2._2
                 "There are sweets and tea on the table of seemingly infinite supply; a large door overtaken by roses dominates the wall to your right. " +
                 "\r\nA dizzying sweet scent starts to fills the room, your gut tells you it's a bad omen. After all, the scent is coming from the blood-red roses. ");
 
+            Location intricateRoom = new Location("Intricate Room", "Another fancy room with decorated in an odd colours of antiquity. " +
+                "A magnificent window dominates the wall in front of you, letting in nothing but darkness. Through the bright " +
+                "reflections in the window you can make out a dark, dense, forest.");
+
+            Location apartmentRoom = new Location("Apartment", "Clearly a well-lit student apartment-room, yet, you can't help but feel that " +
+                "this room is eeriely familiar. \r\n" +
+                "A large bed sized for two takes up most of the living space in the middle with some smaller pieces of furniture spaced evenly throughout the room. ");
+
+            Path teaToIntricate = new Path(new string[] { "north" }, "Fancy Door", "A foreboding doorway with intricate rose carvings.", teaRoom, intricateRoom);
+            Path intricateToTea = new Path(new string[] { "south" }, "Fancy Door", "A foreboding doorway with intricate rose carvings.", intricateRoom, teaRoom);
+            Path teaToApart = new Path(new string[] { "east" }, "Scary Door... Gate.", "A rose-laidened door bursting to the seam in great red colours. It gives off quite an ominous feeling.", teaRoom, apartmentRoom);
+            Path apartToTea = new Path(new string[] { "south" }, "Scary Door... Gate.", "A rose-laidened door bursting to the seam in great red colours. It gives off quite an ominous feeling.", apartmentRoom, teaRoom);
+
+            teaRoom.AddPath(teaToIntricate);
+            intricateRoom.AddPath(intricateToTea);
+            teaRoom.AddPath(teaToApart);
+            apartmentRoom.AddPath(apartToTea);
+
+
             teaRoom.Inventory.Put(teaTable);
+
+
+            Console.WriteLine();
+
+            WriteColoredLine(new string[]
+                {
+                    "Welcome to ",
+                    "Nightmaher!"
+                }, new ConsoleColor[] {
+                    _norCol,
+                    _redCol
+                }
+            );
+
+            WriteColoredLine("The story of one's eternal rest.", _sysCol);
+            Console.WriteLine();
+
+            Console.WriteLine("This is version 0.6.1 'Nightmare-themed Maze. Happy. Hapy.' | Iteration 7 in progress ");
+            Console.WriteLine();
+            Console.WriteLine("What is your name?");
+            Console.ForegroundColor = _txtCol;
+            string name = Console.ReadLine();
+            Console.ForegroundColor = _norCol;
+            Console.WriteLine("How would you describe yourself? (e.g. 'A mighty programmer')");
+            Console.ForegroundColor = _txtCol;
+            string description = Console.ReadLine() + "!";
+            Console.ForegroundColor = _norCol;
+            
+            Console.WriteLine();
+            WriteColoredLine((name + ", " + description + " It is time to leave the lecture and fall into the world of nightmahers!"),_txtCol);
+            Console.WriteLine();
+
+            Player player = new Player(name, description);
+
+            
 
             player.Location = teaRoom;
 
@@ -111,8 +149,8 @@ namespace pt2._2
             player.Inventory.Put(bag);
             bag.Inventory.Put(woodblade);
 
-            Command l = new Look();
-            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Command c; ;
+            Console.ForegroundColor = _sysCol;
 
             while (true)
             {
@@ -120,16 +158,33 @@ namespace pt2._2
                 Console.Write("Command--> ");
 
                 ConsoleColor originalColor = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = _norCol;
 
-                
                 _input = Console.ReadLine();
+
+                switch (_input.Split()[0].ToLower())
+                {
+                    case "look":
+                        c = new Look();
+                        break;
+
+                    case "move":
+                        c = new Move();
+                        break;
+
+                    default:
+                        c = new Look();
+                        break;
+                }
 
                 Console.ForegroundColor = originalColor;
 
+                _output = c.Execute(player, _input.Split());
+
                 Console.WriteLine();
-                ColoredConsoleWrite(ConsoleColor.Cyan,(l.Execute(player, _input.Split())));
-                Console.WriteLine();
+
+
+                WriteColoredLine(_output, _txtCol);
                 Console.WriteLine();
             }
         }
