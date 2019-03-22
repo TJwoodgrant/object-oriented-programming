@@ -44,7 +44,10 @@ namespace pt2._2
         public Location Location{ get => _location; set => _location = value;  }
         public void Move(Path path)
         {
-            _location = path.Destination;
+            if(path.Destination != null)
+            {
+                _location = path.Destination;
+            }
         }
 
         public Inventory Inventory { get => _inventory; }

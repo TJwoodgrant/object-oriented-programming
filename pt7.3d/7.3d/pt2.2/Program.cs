@@ -100,10 +100,9 @@ namespace pt2._2
             Path apartToTea = new Path(new string[] { "south" }, "Scary Door... Gate.", "A rose-laidened door bursting to the seam in great red colours. It gives off quite an ominous feeling.", apartmentRoom, teaRoom);
 
             teaRoom.AddPath(teaToIntricate);
-            intricateRoom.AddPath(intricateToTea);
             teaRoom.AddPath(teaToApart);
+            intricateRoom.AddPath(intricateToTea);
             apartmentRoom.AddPath(apartToTea);
-
 
             teaRoom.Inventory.Put(teaTable);
 
@@ -169,6 +168,15 @@ namespace pt2._2
                         break;
 
                     case "move":
+                        c = new Move();
+                        break;
+                    case "head":
+                        c = new Move();
+                        break;
+                    case "go":
+                        c = new Move();
+                        break;
+                    case "leave":
                         c = new Move();
                         break;
 

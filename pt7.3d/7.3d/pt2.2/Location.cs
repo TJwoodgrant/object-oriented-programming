@@ -79,12 +79,25 @@ namespace pt2._2
             }
         }
 
+        public bool HasPath(string direction)
+        {
+            foreach(Path p in _paths)
+            {
+                if (p.FirstID.ToLower() == direction.ToLower())
+                    return true;
+            }
+            return false;
+        }
+
         public override string ShortDescription { get => "You are in a " + Name; }
 
         public override string LongDescription { get => base.LongDescription + PathList; }
 
 
         public Inventory Inventory { get => _inventory; }
+        public List<Path> Paths { get => _paths; }
+
+        
 
         
 

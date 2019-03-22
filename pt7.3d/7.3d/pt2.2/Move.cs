@@ -17,9 +17,6 @@ namespace pt2._2
             string error = "Error in move input.";
             string _moveDir;
 
-            if (text[0].ToLower() != "move")
-                return error;
-
             switch (text.Length)
             {
                 case 1:
@@ -43,8 +40,8 @@ namespace pt2._2
                 if (_path.GetType() != typeof(Path))
                     return "Could not find the " + _path.Name;
                 p.Move((Path)_path);
-                return "You have moved to the " + ((Path)_path).Destination.Name + "\r\n\n" +
-                    ((Path)_path).Destination.LongDescription;
+                return "You have moved to the " + p.Location.Name + "\r\n\n" +
+                    p.Location.LongDescription;
             } else
             {
                 return error;

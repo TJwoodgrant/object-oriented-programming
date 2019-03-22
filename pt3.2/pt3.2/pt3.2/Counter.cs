@@ -13,7 +13,7 @@ namespace pt3._2
         public Counter(string name)
         {
             _name = name;
-            _count = 0;
+            _value = 0;
         }
 
         public int Count { get => _value; }
@@ -22,12 +22,12 @@ namespace pt3._2
 
         public void Increment()
         {
-            _count++;
+            _value++;
         }
 
         public void Reset()
         {
-            _count = 0;
+            _value = 0;
         }
 
        

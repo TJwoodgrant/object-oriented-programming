@@ -1,0 +1,10 @@
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\bin\Debug\netcoreapp2.1\ExampleProgram.deps.json
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\bin\Debug\netcoreapp2.1\ExampleProgram.runtimeconfig.json
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\bin\Debug\netcoreapp2.1\ExampleProgram.runtimeconfig.dev.json
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\bin\Debug\netcoreapp2.1\ExampleProgram.dll
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\bin\Debug\netcoreapp2.1\ExampleProgram.pdb
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\obj\Debug\netcoreapp2.1\ExampleProgram.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\obj\Debug\netcoreapp2.1\ExampleProgram.AssemblyInfoInputs.cache
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\obj\Debug\netcoreapp2.1\ExampleProgram.AssemblyInfo.cs
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\obj\Debug\netcoreapp2.1\ExampleProgram.dll
+C:\repos\object-oriented-programming\ExampleProgram\ExampleProgram\obj\Debug\netcoreapp2.1\ExampleProgram.pdb
