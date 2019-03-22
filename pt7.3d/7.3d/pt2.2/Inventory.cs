@@ -65,11 +65,29 @@ namespace pt2._2
             {
 
                 string list = string.Empty;
-                foreach(Item i in _items)
+
+                if (_items.Count == 1)
                 {
-                    list = list + "    " + i.ShortDescription + System.Environment.NewLine;
+                    list = list + "    a " + _items[0].FirstID + ".";
+                    return list;
                 }
+
+                    for (int i = 0; i < _items.Count; i++)
+                {
+
+                    if (i == _items.Count - 1)
+                    {
+                        list = list + "    and a " + _items[i].FirstID + ".";
+                    }
+                    else
+                    {
+                        list = list + "    a " + _items[i].FirstID + ";\r\n";
+                    }
+                }
+
                 return list;
+
+
             }
 
         }

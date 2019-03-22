@@ -19,7 +19,13 @@ namespace pt2._2
 
         public override string LongDescription
         {
-            get => base.LongDescription;
+            get
+            {
+                string desc = new string("");
+                desc = desc + "You are " + Name + ", " + base.LongDescription +
+                    "\r\nYou are carrying: \r\n" + _inventory.ItemList;
+                return desc;
+            }
         }
 
         public GameObject Locate(string id)
@@ -48,6 +54,11 @@ namespace pt2._2
             {
                 _location = path.Destination;
             }
+        }
+
+        public GameObject Take(string id)
+        {
+            return Inventory.Take(id);
         }
 
         public Inventory Inventory { get => _inventory; }

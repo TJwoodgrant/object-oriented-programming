@@ -31,12 +31,6 @@ namespace pt2._2
             string _itemid;
             string error = "Error in look input.";
 
-
-
-            if (text[0].ToLower() != "look")
-                return error;
-
-
             
 
             switch (text.Length)
@@ -47,8 +41,9 @@ namespace pt2._2
                     break;
 
                 case 2:
+
                     if (ContainsString(text[1].ToLower(), new string[] {"north",
-                        "south", "east", "west" }))
+                        "south", "east", "west", "up", "down", "around"  }))
                     {
                         _itemid = text[1];
                         _container = p as IHaveInventory;
@@ -92,7 +87,7 @@ namespace pt2._2
         private string LookAtIn(string thingId, IHaveInventory container)
         {
             if (container.Locate(thingId) != null)
-                return container.Locate(thingId).LongDescription;
+                return container.Locate(thingId).LongDescription+"\r\n";
 
             return "Could not find " + thingId +".";
         }

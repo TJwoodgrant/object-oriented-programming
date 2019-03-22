@@ -23,11 +23,14 @@ namespace pt2._2
             return _inventory.Fetch(id);
         }
 
-        
-        
-        public string FullDescription
+        public GameObject Take(string id)
         {
-            get => "A bag endorned with a six-sided star inside a circle";
+            return _inventory.Take(id);
+        }
+
+        public override string LongDescription
+        {
+            get => base.LongDescription + "\r\nInside, you see: \r\n" + _inventory.ItemList;
         }
 
         public Inventory Inventory
@@ -84,7 +87,7 @@ namespace pt2._2
             b = new Bag(new string[] { "small", "cloth", "bag" }, "bag", "A small cloth bag");
 
             string expected = "A bag endorned with a six-sided star inside a circle";
-            string actual = b.FullDescription;
+            string actual = b.LongDescription;
             Assert.AreEqual(expected, actual, "Test full description of bag");
         }
 

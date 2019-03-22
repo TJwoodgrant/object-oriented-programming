@@ -14,7 +14,7 @@ namespace pt2._2
 
 
         public Location(string name, string desc) :
-            base(new string[] {"location", "place", "room" }, name, desc)
+            base(new string[] {"location", "place", "room", "around" }, name, desc)
         {
             _inventory = new Inventory();
             _paths = new List<Path>();
@@ -51,7 +51,7 @@ namespace pt2._2
         {
             get
             {
-                string list = string.Empty + "\r\n\n";
+                string list = string.Empty + "\r\n";
 
 
                 if (_paths.Count == 1)
@@ -66,7 +66,7 @@ namespace pt2._2
 
                     if (i == _paths.Count - 1)
                     {
-                        list = list + "and " + _paths[i].FirstID + ".";
+                        list = list + "and " + _paths[i].FirstID + ".\r\n";
                     } else
                     {
                         list = list + _paths[i].FirstID + ", ";
@@ -76,6 +76,14 @@ namespace pt2._2
                
 
                 return list;
+            }
+        }
+
+        public string ItemList
+        {
+            get
+            {
+                return "You see: \r\n" + _inventory.ItemList;
             }
         }
 
@@ -89,9 +97,14 @@ namespace pt2._2
             return false;
         }
 
+        public GameObject Take(string id)
+        {
+            return _inventory.Take(id);
+        }
+
         public override string ShortDescription { get => "You are in a " + Name; }
 
-        public override string LongDescription { get => base.LongDescription + PathList; }
+        public override string LongDescription { get => base.LongDescription + "\r\n\n" + ItemList + PathList; }
 
 
         public Inventory Inventory { get => _inventory; }

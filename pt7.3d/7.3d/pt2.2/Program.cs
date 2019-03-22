@@ -69,16 +69,17 @@ namespace pt2._2
         static void Main(string[] args)
         {
 
-            string _input, _output;
+            string _input;
             ConsoleColor _sysCol = ConsoleColor.DarkGray;
             ConsoleColor _norCol = ConsoleColor.Gray;
             ConsoleColor _txtCol = ConsoleColor.Cyan;
             ConsoleColor _redCol = ConsoleColor.DarkRed;
 
-            Bag bag = new Bag(new string[] { "small", "cloth", "bag" }, "bag", "A small cloth bag endorned with a 6-petal star atop a circle.");
+            Bag bag = new Bag(new string[] { "bag"}, "cloth", "A small cloth bag endorned with a 6-petal star atop a circle. Funnily enough, you don't recognise it.");
 
             Item redPot = new Item(new string[] { "potion" }, "red", "A bitter-smelling red potion.");
             Item Gem = new Item(new string[] { "gem" }, "phosphophyllite", "An emerald-green gem of about three-and-a-half hardness. Pretty.");
+            Item Ring = new Item(new string[] { "ring" }, "Maia's", "A toy ring made for children covered with a specks of dirt. You don't recognise the ring... yet you know it belongs to someone special, but who?");
             Item woodblade = new Item(new string[] { "blade" }, "wooden", "A mighty-fine wooden training sword. Beware of termites.");
             Item teaTable = new Item(new string[] { "table" }, "tea", "A tea table lined with an odd antique tablecloth with seemingly infinite supplies of tea and sweets. " +
                 "Four chairs surround the table at each edge. Centre-table is a vase of more blood-red roses, the sight of which seems mesmerising. ");
@@ -105,6 +106,7 @@ namespace pt2._2
             apartmentRoom.AddPath(apartToTea);
 
             teaRoom.Inventory.Put(teaTable);
+            intricateRoom.Inventory.Put(Ring);
 
 
             Console.WriteLine();
@@ -144,56 +146,32 @@ namespace pt2._2
             player.Location = teaRoom;
 
             player.Inventory.Put(redPot);
-            player.Inventory.Put(Gem);
+            bag.Inventory.Put(Gem);
             player.Inventory.Put(bag);
             bag.Inventory.Put(woodblade);
 
-            Command c; ;
+            Command c = new CommandProcessor();
+
+            Console.WriteLine();
+            WriteColoredLine(new string[] { "    ------- ", "Chapter 1", " --------    \r\n" },
+            new ConsoleColor[] {_sysCol, ConsoleColor.Yellow, _sysCol});
+
+            WriteColoredLine("You wake up, feeling dizzy. \r\nYou don't know where you are or why you're here.", _sysCol);
+            Console.WriteLine();
+            WriteColoredLine(c.Execute(player, new string[] { "look" }), _txtCol);
+
+
             Console.ForegroundColor = _sysCol;
 
             while (true)
             {
-
+                Console.ForegroundColor = _sysCol;
                 Console.Write("Command--> ");
-
-                ConsoleColor originalColor = Console.ForegroundColor;
                 Console.ForegroundColor = _norCol;
 
                 _input = Console.ReadLine();
-
-                switch (_input.Split()[0].ToLower())
-                {
-                    case "look":
-                        c = new Look();
-                        break;
-
-                    case "move":
-                        c = new Move();
-                        break;
-                    case "head":
-                        c = new Move();
-                        break;
-                    case "go":
-                        c = new Move();
-                        break;
-                    case "leave":
-                        c = new Move();
-                        break;
-
-                    default:
-                        c = new Look();
-                        break;
-                }
-
-                Console.ForegroundColor = originalColor;
-
-                _output = c.Execute(player, _input.Split());
-
                 Console.WriteLine();
-
-
-                WriteColoredLine(_output, _txtCol);
-                Console.WriteLine();
+                WriteColoredLine(c.Execute(player,_input.Split()), _txtCol);
             }
         }
 
