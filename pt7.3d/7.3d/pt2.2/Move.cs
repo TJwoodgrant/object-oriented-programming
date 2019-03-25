@@ -40,7 +40,7 @@ namespace pt2._2
                 if (_path.GetType() != typeof(Path))
                     return "Could not find the " + _path.Name;
                 p.Move((Path)_path);
-                return "You have moved to the " + p.Location.Name + "\r\n\n" +
+                return "You have moved " + _path.FirstID + " through a " + _path.Name  + " to the " + p.Location.Name + ".\r\n\n" +
                     p.Location.LongDescription;
             } else
             {

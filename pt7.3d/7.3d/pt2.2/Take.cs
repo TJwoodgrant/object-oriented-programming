@@ -52,9 +52,9 @@ namespace pt2._2
                     break;
 
                 case 4:
-                    _container = FetchContainer(p, text[4]);
+                    _container = FetchContainer(p, text[3]); // TODO:THIS IS BROKEN
                     if (_container == null)
-                        return "Could not find " + text[4] + ".";
+                        return "Could not find " + text[3] + ".";
                     _itemid = text[2];
                     break;
 
@@ -80,11 +80,16 @@ namespace pt2._2
 
             GameObject _itemFound = container.Locate(thingId);
             if (_itemFound.GetType() == typeof(Item))
-                p.Inventory.Put(container.Take(thingId) as Item);
+            {
+                Item itemGrabbed = container.Take(thingId) as Item;
+                if (itemGrabbed == null)
+                    return "You can't take " + _itemFound.ShortDescription + " with you.\r\n";
+                p.Inventory.Put(itemGrabbed);
+            }
             else
                 return "error";
 
-            return "You have taken the " + thingId + ".";
+            return "You have taken the " + thingId + ".\r\n";
         }
     }
 }

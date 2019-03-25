@@ -56,7 +56,7 @@ namespace pt2._2
 
                 if (_paths.Count == 1)
                 {
-                    return "\r\n\nThere is an exit to the " + _paths[0].FirstID + ".";
+                    return "\r\n\nThere is an exit to the " + _paths[0].FirstID + ".\r\n";
                 }
 
                 list = list + "There are exits to the ";
@@ -83,7 +83,12 @@ namespace pt2._2
         {
             get
             {
-                return "You see: \r\n" + _inventory.ItemList;
+                 if (_inventory.Count == 0)
+                {
+                    return "";
+                }
+
+                return "In the room you see: \r\n" + _inventory.ItemList;
             }
         }
 

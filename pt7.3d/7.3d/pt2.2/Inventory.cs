@@ -38,7 +38,7 @@ namespace pt2._2
         {
             foreach(Item i in _items)
             {
-                if (i.AreYou(id))
+                if (i.AreYou(id) && i.CanBeTaken)
                 {
                     Item itemFound = i;
                     _items.Remove(i);
@@ -57,6 +57,11 @@ namespace pt2._2
                     return i;
             }
             return null;
+        }
+
+        public int Count
+        {
+            get => _items.Count;
         }
 
         public string ItemList

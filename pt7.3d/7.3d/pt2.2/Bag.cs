@@ -15,6 +15,12 @@ namespace pt2._2
             _inventory = new Inventory();
         }
 
+        public Bag(string[] ids, string name, string desc, bool CanBeTaken) :
+            base(ids, name, desc, CanBeTaken)
+        {
+            _inventory = new Inventory();
+        }
+
         public GameObject Locate(string id)
         {
             if (this.AreYou(id))
@@ -30,7 +36,7 @@ namespace pt2._2
 
         public override string LongDescription
         {
-            get => base.LongDescription + "\r\nInside, you see: \r\n" + _inventory.ItemList;
+            get => base.LongDescription + "\r\nThe " + FirstID + " has: \r\n" + _inventory.ItemList;
         }
 
         public Inventory Inventory

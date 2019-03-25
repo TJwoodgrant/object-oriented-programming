@@ -49,7 +49,6 @@ namespace pt2._2
                 case "take":
                     c = new Take();
                     break;
-
                 default:
                     c = new Look();
                     break;

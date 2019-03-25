@@ -37,7 +37,14 @@ namespace pt2._2
             {
                 case 1:
                     _container = p as IHaveInventory;
-                    _itemid = "room";
+                    switch (text[0]) {
+                        case "look":
+                            _itemid = "room";
+                            break;
+                        default:
+                            _itemid = text[0];
+                            break;
+                    }
                     break;
 
                 case 2:
@@ -49,7 +56,8 @@ namespace pt2._2
                         _container = p as IHaveInventory;
                     } else
                     {
-                        return error;
+                        _itemid = text[1];
+                        _container = p as IHaveInventory;
                     }
                     break;
 
@@ -58,6 +66,21 @@ namespace pt2._2
                         return "What do you want to look at?";
                     _container = p as IHaveInventory;
                     _itemid = text[2];
+                    break;
+
+                case 4:
+                    switch (text[0])
+                    {
+                        case "examine":
+                            _container = FetchContainer(p, text[3]);
+                            if (_container == null)
+                                return "Could not find " + text[3] + ".";
+                            _itemid = text[1];
+                            break;
+                        default:
+                            return error;
+                            
+                    }
                     break;
 
                 case 5:

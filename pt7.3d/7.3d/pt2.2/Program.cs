@@ -22,6 +22,7 @@ namespace pt2._2
 {
     class Program
     {
+        
 
         public static void WriteColoredLine(string message, ConsoleColor color)
         {
@@ -70,6 +71,7 @@ namespace pt2._2
         {
 
             string _input;
+            bool NotRequestClose = true;
             ConsoleColor _sysCol = ConsoleColor.DarkGray;
             ConsoleColor _norCol = ConsoleColor.Gray;
             ConsoleColor _txtCol = ConsoleColor.Cyan;
@@ -81,8 +83,9 @@ namespace pt2._2
             Item Gem = new Item(new string[] { "gem" }, "phosphophyllite", "An emerald-green gem of about three-and-a-half hardness. Pretty.");
             Item Ring = new Item(new string[] { "ring" }, "Maia's", "A toy ring made for children covered with a specks of dirt. You don't recognise the ring... yet you know it belongs to someone special, but who?");
             Item woodblade = new Item(new string[] { "blade" }, "wooden", "A mighty-fine wooden training sword. Beware of termites.");
-            Item teaTable = new Item(new string[] { "table" }, "tea", "A tea table lined with an odd antique tablecloth with seemingly infinite supplies of tea and sweets. " +
-                "Four chairs surround the table at each edge. Centre-table is a vase of more blood-red roses, the sight of which seems mesmerising. ");
+            Item sweets = new Item(new string[] { "sweet" }, "colourful", "A sweet wrapped in a colourful wrapper with thorny rose prints on it. ");
+            Bag teaTable = new Bag(new string[] { "table" }, "tea", "A tea table lined with an odd antique tablecloth with seemingly infinite supplies of tea and sweets. " +
+                "Four chairs surround the table at each edge. Centre-table is a vase of more blood-red roses, the sight of which seems mesmerising. ",false);
             Location teaRoom = new Location("Fancy Tea Room", "You're in a fancy room decorated with odd colours of an antique design. Definitely not to your liking. " +
                 "There are sweets and tea on the table of seemingly infinite supply; a large door overtaken by roses dominates the wall to your right. " +
                 "\r\nA dizzying sweet scent starts to fills the room, your gut tells you it's a bad omen. After all, the scent is coming from the blood-red roses. ");
@@ -104,6 +107,8 @@ namespace pt2._2
             teaRoom.AddPath(teaToApart);
             intricateRoom.AddPath(intricateToTea);
             apartmentRoom.AddPath(apartToTea);
+
+            teaTable.Inventory.Put(sweets);
 
             teaRoom.Inventory.Put(teaTable);
             intricateRoom.Inventory.Put(Ring);
@@ -158,12 +163,12 @@ namespace pt2._2
 
             WriteColoredLine("You wake up, feeling dizzy. \r\nYou don't know where you are or why you're here.", _sysCol);
             Console.WriteLine();
-            WriteColoredLine(c.Execute(player, new string[] { "look" }), _txtCol);
+            WriteColored(c.Execute(player, new string[] { "look" }), _txtCol);
 
 
             Console.ForegroundColor = _sysCol;
 
-            while (true)
+            while (NotRequestClose)
             {
                 Console.ForegroundColor = _sysCol;
                 Console.Write("Command--> ");
@@ -171,7 +176,16 @@ namespace pt2._2
 
                 _input = Console.ReadLine();
                 Console.WriteLine();
-                WriteColoredLine(c.Execute(player,_input.Split()), _txtCol);
+
+                if (_input.Split()[0].ToLower() == "quit")
+                {
+                    NotRequestClose = false;
+                } else
+                {
+                    WriteColoredLine(c.Execute(player, _input.Split()), _txtCol);
+                }
+                    
+                
             }
         }
 
