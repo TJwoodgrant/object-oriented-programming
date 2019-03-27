@@ -56,7 +56,7 @@ namespace pt2._2
 
                 if (_paths.Count == 1)
                 {
-                    return "\r\n\nThere is an exit to the " + _paths[0].FirstID + ".\r\n";
+                    return "\r\n\nThere is an exit " + _paths[0].FirstID + ".\r\n";
                 }
 
                 list = list + "There are exits to the ";

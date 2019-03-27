@@ -34,14 +34,13 @@ namespace MyGame
 
         public override void DrawOutline()
         {
-            SwinGame.FillRectangle(Color.Black,
-                                    this.X - 2, this.Y - 1,
-                                    _length + 5, 3);
+            SwinGame.FillCircle(Color.Black, X, Y,5);
+            SwinGame.FillCircle(Color.Black, X + _length, Y, 5);
         }
 
         public override bool IsAt(Point2D pt)
         {
-            return SwinGame.PointInRect(pt, SwinGame.CreateRectangle(this.X, this.Y, this.X + _length, this.Y));
+            return SwinGame.PointInRect(pt, SwinGame.CreateRectangle(this.X, this.Y, _length, 3));
         }
     }
 }

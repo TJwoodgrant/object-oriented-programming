@@ -36,7 +36,13 @@ namespace pt2._2
 
         public override string LongDescription
         {
-            get => base.LongDescription + "\r\nThe " + FirstID + " has: \r\n" + _inventory.ItemList;
+            get
+            {
+                if (_inventory.Count != 0)
+                    return base.LongDescription + "\r\nThe " + FirstID + " has: \r\n" + _inventory.ItemList;
+                else
+                    return base.LongDescription;
+            }
         }
 
         public Inventory Inventory
@@ -92,7 +98,7 @@ namespace pt2._2
         {
             b = new Bag(new string[] { "small", "cloth", "bag" }, "bag", "A small cloth bag");
 
-            string expected = "A bag endorned with a six-sided star inside a circle";
+            string expected = "A bag adorned with a six-sided star inside a circle";
             string actual = b.LongDescription;
             Assert.AreEqual(expected, actual, "Test full description of bag");
         }

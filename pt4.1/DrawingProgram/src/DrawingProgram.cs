@@ -41,24 +41,20 @@ namespace MyGame
                     if (kindToAdd == ShapeKind.Circle)
                     {
                         Circle newCircle = new Circle();
-                        newCircle.X = x;
-                        newCircle.Y = y;
                         newShape = newCircle;
                     }
                     else if (kindToAdd == ShapeKind.Line)
                     {
                         Line newLine = new Line();
-                        newLine.X = x;
-                        newLine.Y = y;
                         newShape = newLine;
                     } else
                     {
                         Rectangle newRect = new Rectangle();
-                        newRect.X = x;
-                        newRect.Y = y;
                         newShape = newRect;
                     }
 
+                    newShape.X = x;
+                    newShape.Y = y;
                     myDrawing.AddShape(newShape);
                 }
 

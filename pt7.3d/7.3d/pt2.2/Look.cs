@@ -112,7 +112,7 @@ namespace pt2._2
             if (container.Locate(thingId) != null)
                 return container.Locate(thingId).LongDescription+"\r\n";
 
-            return "Could not find " + thingId +".";
+            return "Could not find " + thingId +".\r\n";
         }
     }
 

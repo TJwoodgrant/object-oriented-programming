@@ -17,8 +17,8 @@ namespace pt3._2
         }
 
         public int Count { get => _value; }
+        public string Name { get => _name; set => _name = value; }
 
-        
 
         public void Increment()
         {

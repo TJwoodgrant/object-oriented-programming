@@ -52,10 +52,10 @@ namespace pt2._2
                     break;
 
                 case 4:
-                    _container = FetchContainer(p, text[3]); // TODO:THIS IS BROKEN
-                    if (_container == null)
-                        return "Could not find " + text[3] + ".";
-                    _itemid = text[2];
+                    _container = FetchContainer(p, text[3]); // I think this is broken
+                    if (_container == null)                  //  somewhere...
+                        return "Could not find " + text[3] + ".\r\n";
+                    _itemid = text[1];
                     break;
 
                 default:
@@ -63,7 +63,6 @@ namespace pt2._2
                     return error;
 
             }
-
 
             return TakeItemFrom(p,_itemid, _container);
         }
@@ -76,18 +75,13 @@ namespace pt2._2
         private String TakeItemFrom(Player p, string thingId, IHaveInventory container)
         {
             if (container.Locate(thingId) == null)
-                return "Could not find " + thingId;
+                return "Could not find " + thingId + "\r\n";
 
             GameObject _itemFound = container.Locate(thingId);
-            if (_itemFound.GetType() == typeof(Item))
-            {
                 Item itemGrabbed = container.Take(thingId) as Item;
                 if (itemGrabbed == null)
                     return "You can't take " + _itemFound.ShortDescription + " with you.\r\n";
                 p.Inventory.Put(itemGrabbed);
-            }
-            else
-                return "error";
 
             return "You have taken the " + thingId + ".\r\n";
         }
