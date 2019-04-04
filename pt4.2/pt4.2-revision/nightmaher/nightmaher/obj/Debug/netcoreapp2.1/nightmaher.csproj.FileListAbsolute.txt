@@ -1,0 +1,14 @@
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\nightmaher.deps.json
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\nightmaher.runtimeconfig.json
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\nightmaher.runtimeconfig.dev.json
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\nightmaher.dll
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\obj\Debug\netcoreapp2.1\nightmaher.csprojAssemblyReference.cache
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\obj\Debug\netcoreapp2.1\nightmaher.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\obj\Debug\netcoreapp2.1\nightmaher.AssemblyInfoInputs.cache
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\obj\Debug\netcoreapp2.1\nightmaher.AssemblyInfo.cs
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\bin\Debug\netcoreapp2.1\nightmaher.pdb
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\obj\Debug\netcoreapp2.1\nightmaher.dll
+C:\repos\object-oriented-programming\pt4.2\pt4.2-revision\nightmaher\nightmaher\obj\Debug\netcoreapp2.1\nightmaher.pdb

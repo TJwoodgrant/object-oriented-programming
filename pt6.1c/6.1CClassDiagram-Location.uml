@@ -1,0 +1,16 @@
+@startuml
+
+title 6.1C Class Diagram
+
+
+class Location  <<Gameobject, IHaveInventory>> {
+  + - _inventory : Inventory <<readonly property>>
+  
+  + + Location(string name, string desc) : Location
+  + + Locate(string id) : GameObject
+ 
+}
+
+
+
+@enduml

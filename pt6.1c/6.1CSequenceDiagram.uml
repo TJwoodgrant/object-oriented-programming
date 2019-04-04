@@ -1,0 +1,17 @@
+@startuml
+
+title 6.1C Location Sequence Diagram
+
+ -> Console : "look at room"
+ Console -> Command : "look" "at" "room"
+ Command -> Player : Locate "room" in "player"
+ Player -> Player : Are you "room"? No
+ Player -> Location : Are you "room"
+ Location -> Location : Yes, I am room
+ Location --> Player : GameObject Location
+ Player --> Command : GameObject Location
+ Command --> Console : Location Description
+ <-- Console : "A fancy tea room..."
+
+
+@enduml

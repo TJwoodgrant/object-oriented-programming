@@ -102,6 +102,17 @@ namespace pt2._2
             GameObject actual = b1.Locate(whitePot.FirstID);
 
             Assert.AreNotEqual(expected, actual, "Test Bag in Bag, that super-bag cannot locate things inside child bag");
+
+            expected = b2;
+            actual = b1.Locate(b2.FirstID) as Item;
+            Assert.AreEqual(expected, actual, "Test Bag in Bag, locate b2 in b1");
+
+            expected = whitePot;
+            actual = b2.Locate(whitePot.FirstID);
+            Assert.AreEqual(expected, actual, "Test Bag in Bag, locate whitepot in b2");
+
+
+
         }
 
     }
