@@ -1,0 +1,11 @@
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\bin\Debug\netcoreapp2.1\EventsTest.deps.json
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\bin\Debug\netcoreapp2.1\EventsTest.runtimeconfig.json
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\bin\Debug\netcoreapp2.1\EventsTest.runtimeconfig.dev.json
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\bin\Debug\netcoreapp2.1\EventsTest.dll
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\bin\Debug\netcoreapp2.1\EventsTest.pdb
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\obj\Debug\netcoreapp2.1\EventsTest.csprojAssemblyReference.cache
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\obj\Debug\netcoreapp2.1\EventsTest.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\obj\Debug\netcoreapp2.1\EventsTest.AssemblyInfoInputs.cache
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\obj\Debug\netcoreapp2.1\EventsTest.AssemblyInfo.cs
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\obj\Debug\netcoreapp2.1\EventsTest.dll
+C:\repos\object-oriented-programming\Prototypes\EventsTest\EventsTest\obj\Debug\netcoreapp2.1\EventsTest.pdb
