@@ -57,8 +57,10 @@ var clock = new Clock("A javascript clock!");
 console.log("starting clock");
 console.log("ticking: " + clock.minutes());
 
-while(clock.hours() < 20) {
+
+for (var i = 0; i < 60*60*24+10; i++) {
     clock.tick();
     console.log(clock.time());
 }
+
 console.log(clock.name);
