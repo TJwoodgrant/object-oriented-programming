@@ -1,0 +1,82 @@
+@startuml
+
+title 6.3C Object Oriented
+
+Artillery3  *-down-> World
+World "1" o-down->"many" Player
+
+Player -left- PhysicsComponent
+Player -up-|> Entity
+
+Projectile -right- PhysicsComponent
+Projectile -up-|> Entity
+
+
+class Artillery3 {
+    + - _world : World
+
+    + + Artillery3(Rectangle Window)
+    + + NewGame()
+    + + Run()
+    + + EndGame()
+    + + LoadResources()
+    
+}
+
+class World {
+    + - _terrain : Terrain
+    + - _players : List<Player>
+    + - _entityManager : EntityManager
+    + - _physicsEngine : PhysicsEngine
+    
+    + + Update()
+    + + Draw()
+    + + GenerateTerrain()
+
+}
+
+abstract Entity <<abstract>> {
+    + - _position : Point2D
+    + - _bitmap : Bitmap
+    + - _enabeld : bool <<property>>
+    
+    + + Update()
+    + + Draw()
+}
+
+class Player <<entity>> {
+    + - _physics : PhysicsComponent
+    + - _name : string
+    + - _health : float
+    
+    + + Update()
+    + + Draw()
+    + + Fire()
+    + + Die()
+}
+
+class PhysicsComponent{
+    + - _position : float <<property>>
+    + - _velocity : float <<property>>
+    + - _acceleration : float <<property>>
+    + - _hasGravity : bool <<readonly property>>
+    
+    + + Update()
+
+}
+
+class Projectile <<entity>> {
+    + - _physics : PhysicsComponent
+    + - _damage : float
+    + - _explosionRad : int
+    
+    
+    + + Update()
+    + + Draw()
+    + + Explode()
+
+}
+
+
+
+@enduml
