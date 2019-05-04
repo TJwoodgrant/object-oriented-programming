@@ -104,7 +104,9 @@ namespace pt2._2
 
         private IHaveInventory FetchContainer(Player p, string containerId)
         {
-            return p.Locate(containerId) as IHaveInventory;
+            if (p != null)
+                return p.Locate(containerId) as IHaveInventory;
+            return null;
         }
 
         private string LookAtIn(string thingId, IHaveInventory container)
@@ -132,10 +134,10 @@ namespace pt2._2
         [Test]
         public void TestLookAtMe()
         {
-            p = new Player("MC", "You are MC, a mere shadow in the literature club.");
+            p = new Player("MC", "a mere shadow in the literature club.");
             l = new Look();
 
-            string expected = "You are MC, a mere shadow in the literature club.";
+            string expected = "You are MC, a mere shadow in the literature club.\r\nYou are carrying: \r\n\r\n";
             string actual = l.Execute(p, new string[] { "look", "at", "inventory"});
 
             Assert.AreEqual(expected, actual, "TestLookCommand can look for 'inventory' and returns player long description");
@@ -149,7 +151,7 @@ namespace pt2._2
             p.Inventory.Put(Gem);
             l = new Look();
 
-            string expected = "An emerald-green gem of about three-and-a-half hardness. Pretty.";
+            string expected = "An emerald-green gem of about three-and-a-half hardness. Pretty.\r\n";
             string actual = l.Execute(p, new string[] { "look", "at", "gem" });
 
             Assert.AreEqual(expected, actual,"TestLookCommand for gem player inventory, should return long desc for gem.");
@@ -161,7 +163,7 @@ namespace pt2._2
             p = new Player("MC", "The player");
             l = new Look();
 
-            string expected = "Could not find gem.";
+            string expected = "Could not find gem.\r\n";
             string actual = l.Execute(p, new string[] { "look", "at", "gem" });
 
             Assert.AreEqual(expected, actual, "TestLookCommand for  non-existent gem player inventory, should return 'not found'.");
@@ -174,7 +176,7 @@ namespace pt2._2
             p.Inventory.Put(Gem);
             l = new Look();
 
-            string expected = "An emerald-green gem of about three-and-a-half hardness. Pretty.";
+            string expected = "An emerald-green gem of about three-and-a-half hardness. Pretty.\r\n";
             string actual = l.Execute(p, new string[] { "look", "at", "gem", "in", "inventory" });
 
             Assert.AreEqual(expected, actual, "TestLookCommand for gem player inventory 'look at gem in inventory', should return long desc for gem.");
@@ -190,7 +192,7 @@ namespace pt2._2
 
             l = new Look();
 
-            string expected = "An emerald-green gem of about three-and-a-half hardness. Pretty.";
+            string expected = "An emerald-green gem of about three-and-a-half hardness. Pretty.\r\n";
             string actual = l.Execute(p, new string[] { "look", "at", "gem", "in", "bag" });
 
             Assert.AreEqual(expected, actual, "TestLookCommand for gem in bag 'look at gem in bag', should return long desc for gem.");
@@ -220,7 +222,7 @@ namespace pt2._2
 
             l = new Look();
 
-            string expected = "Could not find gem.";
+            string expected = "Could not find gem.\r\n";
             string actual = l.Execute(p, new string[] { "look", "at", "gem", "in", "inventory" });
 
             Assert.AreEqual(expected, actual, "TestLookCommand for no gem in bag 'look at gem in inventory', should return 'could not find'");
@@ -231,7 +233,7 @@ namespace pt2._2
         {
             l = new Look();
 
-            string expected = "Error in look input.";
+            string expected = "Could not find inventory.";
             string actual = l.Execute(p, new string[] { "stare", "at", "gem", "in", "inventory" });
 
             Assert.AreEqual(expected, actual, "TestLookCommand for invalid look command. Should return 'Error in look input'");

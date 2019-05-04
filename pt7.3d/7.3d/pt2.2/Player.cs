@@ -125,7 +125,7 @@ namespace pt2._2
         {
             Player p = new Player("MC", "The player");
 
-            string expected = "The player";
+            string expected = "You are MC, The player\r\nYou are carrying: \r\n";
             string actual = p.LongDescription;
 
             Assert.AreEqual(expected, actual, "Test Player has correct long description");

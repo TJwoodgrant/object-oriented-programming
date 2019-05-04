@@ -98,7 +98,7 @@ namespace pt2._2
         {
             b = new Bag(new string[] { "small", "cloth", "bag" }, "bag", "A small cloth bag");
 
-            string expected = "A bag adorned with a six-sided star inside a circle";
+            string expected = "A small cloth bag";
             string actual = b.LongDescription;
             Assert.AreEqual(expected, actual, "Test full description of bag");
         }

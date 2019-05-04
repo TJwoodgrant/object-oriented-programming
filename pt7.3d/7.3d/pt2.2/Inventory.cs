@@ -161,7 +161,7 @@ namespace pt2._2
             i.Put(itm);
             i.Put(itm2);
             string actual = i.ItemList;
-            string expected = "    a red potion\r\n    a blue potion\r\n";
+            string expected = "    a potion;\r\n    and a potion.";
             Assert.AreEqual(expected, actual, "Test Inventory List String, should be a formatted list");
         }
 
