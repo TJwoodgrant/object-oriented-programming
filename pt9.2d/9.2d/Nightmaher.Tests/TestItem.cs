@@ -40,4 +40,5 @@ namespace Nightmaher.Tests
                 Assert.AreEqual(actual, expected, "Itest Item LongDesc");
             }
         }
+    }
 }
