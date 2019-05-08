@@ -33,12 +33,13 @@ namespace Nightmaher.wpf
 
         private void EnterButton_Click(object sender, RoutedEventArgs e)
         {
-            mainConsole.Text = "test";
+            mainConsole.Text += "\n" + _nightmaher.InputCommand(commandBox.Text);
+            commandBox.Clear();
         }
 
         private void CommandBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
     }
 }
