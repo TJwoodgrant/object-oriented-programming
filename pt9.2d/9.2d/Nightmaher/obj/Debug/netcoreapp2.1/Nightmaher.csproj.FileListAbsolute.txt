@@ -1,0 +1,11 @@
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\bin\Debug\netcoreapp2.1\Nightmaher.deps.json
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\bin\Debug\netcoreapp2.1\Nightmaher.runtimeconfig.json
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\bin\Debug\netcoreapp2.1\Nightmaher.runtimeconfig.dev.json
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\bin\Debug\netcoreapp2.1\Nightmaher.dll
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\bin\Debug\netcoreapp2.1\Nightmaher.pdb
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\obj\Debug\netcoreapp2.1\Nightmaher.csprojAssemblyReference.cache
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\obj\Debug\netcoreapp2.1\Nightmaher.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\obj\Debug\netcoreapp2.1\Nightmaher.AssemblyInfoInputs.cache
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\obj\Debug\netcoreapp2.1\Nightmaher.AssemblyInfo.cs
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\obj\Debug\netcoreapp2.1\Nightmaher.dll
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher\obj\Debug\netcoreapp2.1\Nightmaher.pdb

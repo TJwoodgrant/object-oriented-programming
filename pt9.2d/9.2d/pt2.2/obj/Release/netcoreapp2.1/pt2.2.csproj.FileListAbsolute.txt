@@ -1,0 +1,14 @@
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\pt2.2.deps.json
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\pt2.2.runtimeconfig.json
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\pt2.2.runtimeconfig.dev.json
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\pt2.2.dll
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\bin\Release\netcoreapp2.1\pt2.2.pdb
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\obj\Release\netcoreapp2.1\pt2.2.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\obj\Release\netcoreapp2.1\pt2.2.AssemblyInfoInputs.cache
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\obj\Release\netcoreapp2.1\pt2.2.AssemblyInfo.cs
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\obj\Release\netcoreapp2.1\pt2.2.dll
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\obj\Release\netcoreapp2.1\pt2.2.pdb
+C:\repos\object-oriented-programming\pt7.3d\7.3d\pt2.2\obj\Release\netcoreapp2.1\pt2.2.csprojAssemblyReference.cache
