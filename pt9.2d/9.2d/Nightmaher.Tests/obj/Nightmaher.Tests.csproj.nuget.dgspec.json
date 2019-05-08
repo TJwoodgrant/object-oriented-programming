@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\pt2.2.csproj": {}
+    "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\Nightmaher.Tests.csproj": {}
   },
   "projects": {
-    "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\pt2.2.csproj": {
+    "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\Nightmaher.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\pt2.2.csproj",
-        "projectName": "pt2.2",
-        "projectPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\pt2.2.csproj",
+        "projectUniqueName": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\Nightmaher.Tests.csproj",
+        "projectName": "Nightmaher.Tests",
+        "projectPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\Nightmaher.Tests.csproj",
         "packagesPath": "C:\\Users\\Mikan\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\obj\\",
+        "outputPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,24 +43,20 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.0.1, )"
+              "version": "[15.8.0, )"
             },
             "Microsoft.NETCore.App": {
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
             },
-            "NUnit": {
-              "target": "Package",
-              "version": "[3.11.0, )"
-            },
-            "NUnit.ConsoleRunner": {
+            "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.10.0, )"
             },
-            "NUnit3TestAdapter": {
+            "nunit": {
               "target": "Package",
-              "version": "[3.13.0, )"
+              "version": "[3.10.1, )"
             }
           },
           "imports": [

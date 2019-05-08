@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Microsoft.CodeCoverage/16.0.1": {
+      "Microsoft.CodeCoverage/15.8.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
@@ -96,18 +96,18 @@
           "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll": {}
         }
       },
-      "Microsoft.NET.Test.Sdk/16.0.1": {
+      "Microsoft.NET.Test.Sdk/15.8.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeCoverage": "16.0.1",
-          "Microsoft.TestPlatform.TestHost": "16.0.1"
+          "Microsoft.CodeCoverage": "15.8.0",
+          "Microsoft.TestPlatform.TestHost": "15.8.0"
         },
         "build": {
-          "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.props": {},
-          "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.targets": {}
+          "build/netcoreapp1.0/Microsoft.Net.Test.Sdk.props": {},
+          "build/netcoreapp1.0/Microsoft.Net.Test.Sdk.targets": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
+          "buildMultiTargeting/Microsoft.Net.Test.Sdk.props": {}
         }
       },
       "Microsoft.NETCore.App/2.1.0": {
@@ -301,7 +301,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/16.0.1": {
+      "Microsoft.TestPlatform.ObjectModel/15.8.0": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
@@ -410,24 +410,22 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/16.0.1": {
+      "Microsoft.TestPlatform.TestHost/15.8.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyModel": "1.0.3",
-          "Microsoft.TestPlatform.ObjectModel": "16.0.1",
+          "Microsoft.TestPlatform.ObjectModel": "15.8.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
           "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll": {},
           "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll": {},
-          "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll": {},
           "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll": {},
           "lib/netstandard1.5/testhost.dll": {}
         },
         "runtime": {
           "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll": {},
           "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll": {},
-          "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll": {},
           "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll": {},
           "lib/netstandard1.5/testhost.dll": {}
         },
@@ -636,7 +634,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "NUnit/3.11.0": {
+      "NUnit/3.10.1": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -651,10 +649,7 @@
           "build/NUnit.props": {}
         }
       },
-      "NUnit.ConsoleRunner/3.10.0": {
-        "type": "package"
-      },
-      "NUnit3TestAdapter/3.13.0": {
+      "NUnit3TestAdapter/3.10.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.DotNet.InternalAbstractions": "1.0.0",
@@ -1654,10 +1649,10 @@
     }
   },
   "libraries": {
-    "Microsoft.CodeCoverage/16.0.1": {
-      "sha512": "W7WI3iH6At2I/9x2ODgCIIMO0QfpA7ZCoHkeygMLAaz3Nms/GsugKz9N4hkTve2Lj66g2K4CAmbwe6utEH66lw==",
+    "Microsoft.CodeCoverage/15.8.0": {
+      "sha512": "2hwgoDq1ipHizvgBJG3SBhOnAQlq8eeyk19o2ywauP11+5DjkmDTNUjYglQsHgKKOkvPvCOAaFflQlLbkQnz3Q==",
       "type": "package",
-      "path": "microsoft.codecoverage/16.0.1",
+      "path": "microsoft.codecoverage/15.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1686,7 +1681,7 @@
         "build/netstandard1.0/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
         "lib/net45/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
-        "microsoft.codecoverage.16.0.1.nupkg.sha512",
+        "microsoft.codecoverage.15.8.0.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
       ]
     },
@@ -1767,6 +1762,7 @@
       "path": "microsoft.dotnet.platformabstractions/1.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "lib/.DS_Store",
         "lib/net451/Microsoft.DotNet.PlatformAbstractions.dll",
         "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
@@ -1780,6 +1776,7 @@
       "path": "microsoft.extensions.dependencymodel/1.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "lib/.DS_Store",
         "lib/net451/Microsoft.Extensions.DependencyModel.dll",
         "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
@@ -1788,23 +1785,20 @@
         "microsoft.extensions.dependencymodel.nuspec"
       ]
     },
-    "Microsoft.NET.Test.Sdk/16.0.1": {
-      "sha512": "ON7UIMIhAwrYb0ep+3ztoWVGvtfo88IhiHVnbyOiuVsi8bOMCdMPVcR+EX1WYGgKAd030pHRaxazMlkQ6uDyJQ==",
+    "Microsoft.NET.Test.Sdk/15.8.0": {
+      "sha512": "u7DjH/b1je0sGyYVH+MDMzwVTBRod34mDhkHFAZfVWkRleH9WZLP9FE+1QAU2FBIF5pIJzzRxAs1yDVrof+WGw==",
       "type": "package",
-      "path": "microsoft.net.test.sdk/16.0.1",
+      "path": "microsoft.net.test.sdk/15.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/net40/Microsoft.NET.Test.Sdk.props",
-        "build/net40/Microsoft.NET.Test.Sdk.targets",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.cs",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.fs",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.vb",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.props",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.targets",
-        "build/uap10.0/Microsoft.NET.Test.Sdk.props",
-        "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
-        "microsoft.net.test.sdk.16.0.1.nupkg.sha512",
+        "build/net45/Microsoft.Net.Test.Sdk.props",
+        "build/net45/Microsoft.Net.Test.Sdk.targets",
+        "build/netcoreapp1.0/Microsoft.Net.Test.Sdk.props",
+        "build/netcoreapp1.0/Microsoft.Net.Test.Sdk.targets",
+        "build/uap10.0/Microsoft.Net.Test.Sdk.props",
+        "buildMultiTargeting/Microsoft.Net.Test.Sdk.props",
+        "microsoft.net.test.sdk.15.8.0.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
       ]
     },
@@ -2150,10 +2144,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.TestPlatform.ObjectModel/16.0.1": {
-      "sha512": "AIQ9azu2b31R8nOuFnR32d7cdWidjjLl1dFyLC3LNifzAJoEdCUgkHWUpTTHKWcHhwa9E/NRcdzVple8pbKJ9Q==",
+    "Microsoft.TestPlatform.ObjectModel/15.8.0": {
+      "sha512": "u6qrZi8pXZrPl+vAJBn/yIaPEsl/NglcLD9FD/fh1OmBaFMcp/dp/5daTB7Fo89iDgktZa6PoACq86tZs0DYXA==",
       "type": "package",
-      "path": "microsoft.testplatform.objectmodel/16.0.1",
+      "path": "microsoft.testplatform.objectmodel/15.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2218,14 +2212,14 @@
         "lib/netstandard1.5/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
         "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
         "lib/netstandard1.5/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "microsoft.testplatform.objectmodel.16.0.1.nupkg.sha512",
+        "microsoft.testplatform.objectmodel.15.8.0.nupkg.sha512",
         "microsoft.testplatform.objectmodel.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.TestHost/16.0.1": {
-      "sha512": "H4bYjOjkK4FYQ23RnsHm8FcqR0te8Eky9i9sS1IjVFBlDh1MU7aIwmBUpKpaSAy5xNu7UTHku4RZTWzWHDzS7g==",
+    "Microsoft.TestPlatform.TestHost/15.8.0": {
+      "sha512": "YCbFo2qKhbRn/6h3+pfA8bDJtxg0BpwwBqVMM+KRJTq1zqH9zOTeQuSaNe0DDaxzc0mmD9a4Wn4qG1yuNHDMBA==",
       "type": "package",
-      "path": "microsoft.testplatform.testhost/16.0.1",
+      "path": "microsoft.testplatform.testhost/15.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2315,7 +2309,6 @@
         "lib/net45/_._",
         "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll",
         "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll",
-        "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll",
         "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll",
         "lib/netstandard1.5/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
         "lib/netstandard1.5/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
@@ -2365,7 +2358,7 @@
         "lib/uap10.0/Microsoft.TestPlatform.Utilities.dll",
         "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.Common.dll",
         "lib/uap10.0/testhost.dll",
-        "microsoft.testplatform.testhost.16.0.1.nupkg.sha512",
+        "microsoft.testplatform.testhost.15.8.0.nupkg.sha512",
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
@@ -2440,6 +2433,7 @@
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
+        ".nupkg.metadata",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -2588,10 +2582,10 @@
         "tools/install.ps1"
       ]
     },
-    "NUnit/3.11.0": {
-      "sha512": "BzGk+u02RCrysmLlSzD+okxzMQ8JRF4eFC/qijDJ8Y/FBdTrTkxkQyTFsYkG1o++pr7QpFAE4VDXDqIfZ/gBAg==",
+    "NUnit/3.10.1": {
+      "sha512": "E3ii6+VLdeIxTQ5gPjk/7g/xl+aCifbfcIkiGayZCuos+22FEdtKGrxMe6SzoXCQCcL7gdqhfNIFTaZ1+dS18g==",
       "type": "package",
-      "path": "nunit/3.11.0",
+      "path": "nunit/3.10.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2612,60 +2606,36 @@
         "lib/net45/nunit.framework.dll",
         "lib/net45/nunit.framework.pdb",
         "lib/net45/nunit.framework.xml",
-        "lib/netstandard1.4/nunit.framework.dll",
-        "lib/netstandard1.4/nunit.framework.pdb",
-        "lib/netstandard1.4/nunit.framework.xml",
+        "lib/netstandard1.6/nunit.framework.dll",
+        "lib/netstandard1.6/nunit.framework.pdb",
+        "lib/netstandard1.6/nunit.framework.xml",
         "lib/netstandard2.0/nunit.framework.dll",
         "lib/netstandard2.0/nunit.framework.pdb",
         "lib/netstandard2.0/nunit.framework.xml",
-        "nunit.3.11.0.nupkg.sha512",
+        "nunit.3.10.1.nupkg.sha512",
         "nunit.nuspec"
       ]
     },
-    "NUnit.ConsoleRunner/3.10.0": {
-      "sha512": "NBnFgApGC7+nP688/j033CYTqTfwnIx0wqjrODtoznwZ2lxKqvLxjxNsO9XstgmC5sUBSU2QsLVYd/9IJueMDQ==",
+    "NUnit3TestAdapter/3.10.0": {
+      "sha512": "hC4QeR/iC8yJcI9eyAfAFWBaDP7lh4CnXqIMLq26CLLGQsLqy44uJwBVmo/0o9aTKVwPm/M1lPYqYcfOJMDqyg==",
       "type": "package",
-      "path": "nunit.consolerunner/3.10.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHANGES.txt",
-        "LICENSE.txt",
-        "NOTICES.txt",
-        "nunit.consolerunner.3.10.0.nupkg.sha512",
-        "nunit.consolerunner.nuspec",
-        "tools/Mono.Cecil.dll",
-        "tools/nunit-agent-x86.exe",
-        "tools/nunit-agent-x86.exe.config",
-        "tools/nunit-agent.exe",
-        "tools/nunit-agent.exe.config",
-        "tools/nunit.engine.api.dll",
-        "tools/nunit.engine.api.xml",
-        "tools/nunit.engine.dll",
-        "tools/nunit.nuget.addins",
-        "tools/nunit3-console.exe",
-        "tools/nunit3-console.exe.config"
-      ]
-    },
-    "NUnit3TestAdapter/3.13.0": {
-      "sha512": "9OlA81APTyR/tNkapK2a2dlz4jFra7/Bm1eYT1P1lIq2cJv4OYtWD5uHj3XsO1dz3btiwbIFrWBtZNr/ebRhSw==",
-      "type": "package",
-      "path": "nunit3testadapter/3.13.0",
+      "path": "nunit3testadapter/3.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
+        "build/net35/Mono.Cecil.dll",
         "build/net35/NUnit3.TestAdapter.dll",
         "build/net35/NUnit3.TestAdapter.pdb",
         "build/net35/NUnit3TestAdapter.props",
         "build/net35/nunit.engine.api.dll",
         "build/net35/nunit.engine.dll",
+        "build/netcoreapp1.0/Mono.Cecil.dll",
         "build/netcoreapp1.0/NUnit3.TestAdapter.dll",
         "build/netcoreapp1.0/NUnit3.TestAdapter.pdb",
         "build/netcoreapp1.0/NUnit3TestAdapter.props",
         "build/netcoreapp1.0/nunit.engine.netstandard.dll",
-        "nunit3testadapter.3.13.0.nupkg.sha512",
+        "nunit3testadapter.3.10.0.nupkg.sha512",
         "nunit3testadapter.nuspec"
       ]
     },
@@ -3309,6 +3279,7 @@
       "path": "system.diagnostics.textwritertracelistener/4.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5774,11 +5745,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NET.Test.Sdk >= 16.0.1",
+      "Microsoft.NET.Test.Sdk >= 15.8.0",
       "Microsoft.NETCore.App >= 2.1.0",
-      "NUnit >= 3.11.0",
-      "NUnit.ConsoleRunner >= 3.10.0",
-      "NUnit3TestAdapter >= 3.13.0"
+      "NUnit3TestAdapter >= 3.10.0",
+      "nunit >= 3.10.1"
     ]
   },
   "packageFolders": {
@@ -5788,11 +5758,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\pt2.2.csproj",
-      "projectName": "pt2.2",
-      "projectPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\pt2.2.csproj",
+      "projectUniqueName": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\Nightmaher.Tests.csproj",
+      "projectName": "Nightmaher.Tests",
+      "projectPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\Nightmaher.Tests.csproj",
       "packagesPath": "C:\\Users\\Mikan\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\pt2.2\\obj\\",
+      "outputPath": "C:\\repos\\object-oriented-programming\\pt9.2d\\9.2d\\Nightmaher.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5824,24 +5794,20 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[16.0.1, )"
+            "version": "[15.8.0, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
           },
-          "NUnit": {
-            "target": "Package",
-            "version": "[3.11.0, )"
-          },
-          "NUnit.ConsoleRunner": {
+          "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.10.0, )"
           },
-          "NUnit3TestAdapter": {
+          "nunit": {
             "target": "Package",
-            "version": "[3.13.0, )"
+            "version": "[3.10.1, )"
           }
         },
         "imports": [

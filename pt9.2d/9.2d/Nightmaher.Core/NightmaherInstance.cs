@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nightmaher.Core
 {
-    public class Nightmaher
+    public class NightmaherInstance
     {
         public string ReturnTestString()
         {

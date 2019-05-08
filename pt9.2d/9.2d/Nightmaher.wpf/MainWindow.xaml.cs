@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Nightmaher.Core;
 
 namespace Nightmaher.wpf
 {
@@ -20,6 +21,8 @@ namespace Nightmaher.wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        NightmaherInstance _game = new NightmaherInstance();
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +30,12 @@ namespace Nightmaher.wpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello.");
+            MessageBox.Show(_game.ReturnTestString());
+        }
+
+        private void EnterButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
