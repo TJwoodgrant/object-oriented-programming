@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nightmaher.wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Nightmaher WinForms Version" Height="450" Width="800">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="200" Margin="0,50,0,0" VerticalAlignment="Top" Width="750">
             <TextBlock x:Name="mainConsole" TextWrapping="Wrap" Text="TextBlock" Margin="10,10,0,0"/>
