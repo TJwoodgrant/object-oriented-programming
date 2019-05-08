@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NUnit.Framework;
 
 namespace Nightmaher.Core
 {
@@ -21,7 +20,7 @@ namespace Nightmaher.Core
         {
             get
             {
-                string desc = new string("");
+                string desc = new string("".ToCharArray());
                 desc = desc + "You are " + Name + ", " + base.LongDescription +
                     "\r\nYou are carrying: \r\n" + _inventory.ItemList;
                 return desc;

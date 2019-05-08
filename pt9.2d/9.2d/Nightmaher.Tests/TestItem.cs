@@ -12,7 +12,7 @@ namespace Nightmaher.Tests
         [TestFixture]
         class TestItem
         {
-            new Item i = new Item(new string[] { "potion" }, "red", "A bitter-smelling red potion");
+            Item i = new Item(new string[] { "potion" }, "red", "A bitter-smelling red potion");
 
             [Test]
             public void TestItemIsIdentifiable()

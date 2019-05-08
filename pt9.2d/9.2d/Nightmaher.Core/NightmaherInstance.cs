@@ -8,9 +8,34 @@ namespace Nightmaher.Core
 {
     public class NightmaherInstance
     {
-        public string ReturnTestString()
+
+        string _input;
+        string _output;
+
+
+        public NightmaherInstance()
         {
-            return "Hello, World! -- From Nightmaher.Core's Nightmaher.cs class";
+            _output = "Welcome to Nightmaher!";
+        }
+
+        public string Output
+        {
+            get => _output;
+        }
+        
+        public void Main()
+        {
+            /* Any better way to do this? */
+            
+
+
+
+
+
+
+
+
+
         }
     }
 }

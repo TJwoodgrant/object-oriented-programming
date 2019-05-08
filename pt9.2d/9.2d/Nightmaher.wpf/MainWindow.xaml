@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="147" Margin="0,50,0,0" VerticalAlignment="Top" Width="569">
-            <TextBlock x:Name="mainConsole" TextWrapping="Wrap" Text="TextBlock"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="200" Margin="0,50,0,0" VerticalAlignment="Top" Width="750">
+            <TextBlock x:Name="mainConsole" TextWrapping="Wrap" Text="TextBlock" Margin="10,10,0,0"/>
         </Border>
-        <Button x:Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="606,247,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="EnterButton_Click"/>
-        <TextBox x:Name="commandBox" HorizontalAlignment="Left" Height="23" Margin="112,247,0,0" TextWrapping="Wrap" Text="Command" VerticalAlignment="Top" Width="454"/>
+        <Button x:Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="697,273,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="EnterButton_Click"/>
+        <TextBox x:Name="commandBox" HorizontalAlignment="Left" Height="23" Margin="21,273,0,0" TextWrapping="Wrap" Text="Command" VerticalAlignment="Top" Width="649" TextChanged="CommandBox_TextChanged"/>
     </Grid>
 </Window>

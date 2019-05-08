@@ -22,18 +22,21 @@ namespace Nightmaher.wpf
     public partial class MainWindow : Window
     {
 
-        NightmaherInstance _game = new NightmaherInstance();
+        NightmaherInstance _nightmaher;
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(_game.ReturnTestString());
+            _nightmaher = new NightmaherInstance();
+            mainConsole.Text = _nightmaher.Output;
         }
 
         private void EnterButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainConsole.Text = "test";
+        }
+
+        private void CommandBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
