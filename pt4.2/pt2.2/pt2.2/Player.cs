@@ -23,7 +23,7 @@ namespace pt2._2
 
         public GameObject Locate(string id)
         {
-            if (this.AreYou(id))
+            if (AreYou(id))
                 return this;
 
             return _inventory.Fetch(id);
