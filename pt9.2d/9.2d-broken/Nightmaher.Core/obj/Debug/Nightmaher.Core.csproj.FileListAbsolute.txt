@@ -1,0 +1,6 @@
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher.Core\bin\Debug\Nightmaher.Core.dll
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher.Core\bin\Debug\Nightmaher.Core.pdb
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher.Core\obj\Debug\Nightmaher.Core.csprojAssemblyReference.cache
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher.Core\obj\Debug\Nightmaher.Core.csproj.CoreCompileInputs.cache
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher.Core\obj\Debug\Nightmaher.Core.dll
+C:\repos\object-oriented-programming\pt9.2d\9.2d\Nightmaher.Core\obj\Debug\Nightmaher.Core.pdb
