@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="Nightmaher WinForms Version" Height="450" Width="800">
     <Grid Background="#FF1D1D1D">
-        <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="200" Margin="0,50,0,0" VerticalAlignment="Top" Width="750" Background="#FF464242">
+        <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="274" Margin="21,50,21,0" VerticalAlignment="Top" Width="750" Background="#FF464242">
             <ScrollViewer Foreground="Black" CanContentScroll="True">
-                <TextBlock x:Name="mainConsole" TextWrapping="Wrap" Text="TextBlock" Margin="10,10,0,0" Foreground="White" Background="#FF464242"/>
+                <TextBlock x:Name="mainConsole" TextWrapping="Wrap" Text="TextBlock" Foreground="White" Background="#FF464242" Height="270"/>
             </ScrollViewer>
         </Border>
-        <Button x:Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="697,273,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="EnterButton_Click" Background="#FF464242" Foreground="White" IsDefault="True"/>
-        <TextBox x:Name="commandBox" HorizontalAlignment="Left" Height="23" Margin="21,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="649" TextChanged="CommandBox_TextChanged" Background="#FF464242" Foreground="White"/>
+        <Button x:Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="697,353,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="EnterButton_Click" Background="#FF464242" Foreground="White" IsDefault="True"/>
+        <TextBox x:Name="commandBox" HorizontalAlignment="Left" Height="23" Margin="21,353,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="649" TextChanged="CommandBox_TextChanged" Background="#FF464242" Foreground="White"/>
     </Grid>
 </Window>
