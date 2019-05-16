@@ -5788,11 +5788,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\repos\\object-oriented-programming\\pt7.3d\\7.3d\\pt2.2\\pt2.2.csproj",
+      "projectUniqueName": "C:\\repos\\object-oriented-programming\\pt7.3d\\7.3d\\pt2.2\\pt2.2.csproj",
       "projectName": "pt2.2",
-      "projectPath": "H:\\repos\\object-oriented-programming\\pt7.3d\\7.3d\\pt2.2\\pt2.2.csproj",
+      "projectPath": "C:\\repos\\object-oriented-programming\\pt7.3d\\7.3d\\pt2.2\\pt2.2.csproj",
       "packagesPath": "C:\\Users\\Mikan\\.nuget\\packages\\",
-      "outputPath": "H:\\repos\\object-oriented-programming\\pt7.3d\\7.3d\\pt2.2\\obj\\",
+      "outputPath": "C:\\repos\\object-oriented-programming\\pt7.3d\\7.3d\\pt2.2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

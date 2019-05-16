@@ -8,7 +8,7 @@ namespace pt2._2
     class Move : Command
     {
         public Move() :
-            base(new string[] { "move" })
+            base(new string[] { "move", "stare", "glimpse" })
         {
             
         }

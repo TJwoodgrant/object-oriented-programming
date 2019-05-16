@@ -6,55 +6,25 @@ namespace pt2._2
 {
     class CommandProcessor : Command
     {
-        
+        List<Command> _commands;
 
         public CommandProcessor()
             : base(new string[] { "command" })
         {
-
+            _commands = new List<Command>();
+            _commands.Add(new Look());
+            _commands.Add(new Move());
         }
 
         public override string Execute(Player p, string[] text)
         {
-            Command c;
-            switch (text[0].ToLower())
+            foreach(Command c in _commands)
             {
-                case "look":
-                    c = new Look();
-                    break;
-                case "stare":
-                    c = new Look();
-                    break;
-                case "inspect":
-                    c = new Look();
-                    break;
-                case "examine":
-                    c = new Look();
-                    break;
-                case "eye":
-                    c = new Look();
-                    break;
-                case "move":
-                    c = new Move();
-                    break;
-                case "head":
-                    c = new Move();
-                    break;
-                case "go":
-                    c = new Move();
-                    break;
-                case "leave":
-                    c = new Move();
-                    break;
-                case "take":
-                    c = new Take();
-                    break;
-                default:
-                    c = new Look();
-                    break;
+                if (c.AreYou(text[0].ToLower()))
+                    return c.Execute(p, text);
             }
 
-            return c.Execute(p, text);
+            return "Error in Command input";
         }
     }
 }
