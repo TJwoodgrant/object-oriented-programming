@@ -17,7 +17,7 @@ namespace Nightmaher.Core
     public class NightmaherInstance
     {
 
-        string _input;
+        //string _input;
         string _output;
 
         GameState _gameState;

@@ -7,7 +7,7 @@ namespace Nightmaher.Core
     public class Move : Command
     {
         public Move() :
-            base(new string[] { "move" })
+            base(new string[] { "move", "head", "go", "leave" })
         {
             
         }

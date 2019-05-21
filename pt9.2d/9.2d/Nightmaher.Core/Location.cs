@@ -106,6 +106,11 @@ namespace Nightmaher.Core
             return _inventory.Take(id);
         }
 
+        public void Put(Item item)
+        {
+            _inventory.Put(item);
+        }
+
         public override string ShortDescription { get => "You are in a " + Name; }
 
         public override string LongDescription { get => base.LongDescription + "\r\n\n" + ItemList + PathList; }

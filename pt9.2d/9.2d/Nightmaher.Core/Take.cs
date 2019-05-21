@@ -7,7 +7,7 @@ namespace Nightmaher.Core
     public class Take : Command
     {
         public Take()
-            : base(new string[] { "take" })
+            : base(new string[] { "take", "grab" })
         {
         }
 
@@ -64,7 +64,7 @@ namespace Nightmaher.Core
 
             }
 
-            return TakeItemFrom(p,_itemid, _container);
+            return TakeItemFrom(p, _itemid, _container);
         }
 
         private IHaveInventory FetchContainer(Player p, string containerId)
@@ -78,10 +78,10 @@ namespace Nightmaher.Core
                 return "Could not find " + thingId + "\r\n";
 
             GameObject _itemFound = container.Locate(thingId);
-                Item itemGrabbed = container.Take(thingId) as Item;
-                if (itemGrabbed == null)
-                    return "You can't take " + _itemFound.ShortDescription + " with you.\r\n";
-                p.Inventory.Put(itemGrabbed);
+            Item itemGrabbed = container.Take(thingId) as Item;
+            if (itemGrabbed == null)
+                return "You can't take " + _itemFound.ShortDescription + " with you.\r\n";
+            p.Inventory.Put(itemGrabbed);
 
             return "You have taken the " + thingId + ".\r\n";
         }

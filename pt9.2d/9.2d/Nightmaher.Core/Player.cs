@@ -60,6 +60,11 @@ namespace Nightmaher.Core
             return Inventory.Take(id);
         }
 
+        public void Put(Item item)
+        {
+            _inventory.Put(item);
+        }
+
         public Inventory Inventory { get => _inventory; }
 
     }

@@ -8,7 +8,7 @@ namespace Nightmaher.Core
     {
 
         public Look() :
-            base(new string[] {"look"})
+            base(new string[] {"look", "stare", "examine", "eye"})
         {
 
         }

@@ -8,6 +8,7 @@ namespace Nightmaher.Core
     {
         GameObject Locate(string id);
         GameObject Take(string id);
+        void Put(Item item);
 
         string Name { get; }
 

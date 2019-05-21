@@ -33,6 +33,11 @@ namespace Nightmaher.Core
             return _inventory.Take(id);
         }
 
+        public void Put(Item item)
+        {
+            _inventory.Put(item);
+        }
+
         public override string LongDescription
         {
             get
