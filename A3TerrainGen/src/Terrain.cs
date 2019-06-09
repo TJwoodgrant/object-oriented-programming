@@ -24,6 +24,7 @@ namespace ArtillerySeries.src
         public float[] Map { get => _terrainMap; set => _terrainMap = value; }
         public Color Color { get => _color; set => _color = value; }
         public Point2D Pos { get => _pos; }
+        public Rectangle WindowRect { get => _windowRect; set => _windowRect = value; }
 
         public virtual void Draw()
         {
