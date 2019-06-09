@@ -2,6 +2,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using SwinGameSDK;
+using Newtonsoft.Json;
 
 
 namespace ArtillerySeries.src
@@ -62,13 +63,37 @@ namespace ArtillerySeries.src
 
                 if (!SwinGame.ReadingText())
                 {
-                    reduction = float.Parse(SwinGame.EndReadingText(), CultureInfo.InvariantCulture.NumberFormat);
-                    _terrain = _terrainFactory.Generate(Color.ForestGreen, 180, reduction);
+                    try
+                    {
+                        string input = SwinGame.EndReadingText();
+                        string[] commands = input.Split(' ');
+                        switch (commands[0])
+                        {
+                            case "coef":
+                                reduction = float.Parse(commands[1], CultureInfo.InvariantCulture.NumberFormat);
+                                _terrain = _terrainFactory.Generate(Color.ForestGreen, 180, reduction);
+
+                                break;
+
+                            case "save":
+                                Console.WriteLine("saving!");
+
+                                break;
+
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Error occured when trying to parse user input: " + e.Message);
+                    }
+                    
                     SwinGame.StartReadingText(Color.Black, 20, SwinGame.FontNamed("mainFont"), 10, 10);
                 }
 
-                SwinGame.DrawText("Current Reduction value:" + reduction, Color.Black, SwinGame.FontNamed("mainFont"), 10, 30);
                 _terrain.Draw();
+                SwinGame.FillRectangle(Color.White, 8, 29, 200, 16);
+                SwinGame.DrawText("Current Reduction value:" + reduction, Color.Black, SwinGame.FontNamed("mainFont"), 10, 30);
+                
 
                 //SwinGame.DrawFramerate(0,0);
 
