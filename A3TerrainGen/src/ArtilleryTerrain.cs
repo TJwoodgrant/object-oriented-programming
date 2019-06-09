@@ -81,7 +81,7 @@ namespace ArtillerySeries.src
 
                             case "save":
                                 Console.WriteLine("Saving!");
-                                _writer = new StreamWriter(commands[1] + ".txt");
+                                _writer = new StreamWriter(commands[1] + ".json");
                                 try
                                 {
                                     _writer.Write(JsonConvert.SerializeObject(_terrain));
@@ -90,14 +90,14 @@ namespace ArtillerySeries.src
                                 {
                                     _writer.Close();
                                 }
-                                _message = "Saved " + commands[1] + ".txt";
+                                _message = "Saved " + commands[1] + ".json";
 
 
                                 break;
 
                             case "load":
                                 Console.WriteLine("Loading!");
-                                _reader = new StreamReader(commands[1] + ".txt");
+                                _reader = new StreamReader(commands[1] + ".json");
                                 try
                                 {
                                     _terrain = JsonConvert.DeserializeObject<Terrain>(_reader.ReadToEnd());
@@ -109,17 +109,12 @@ namespace ArtillerySeries.src
                                     _reader.Close();
                                 }
 
-                                _message = "Loaded " + commands[1] + ".txt";
+                                _message = "Loaded " + commands[1] + ".json";
 
                                 break;
 
                         }
                         int x = 0;
-                        foreach (float f in _terrain.Map)
-                        {
-                            Console.WriteLine(x + "-->" + f);
-                            x++;
-                        }
                     }
                     catch (Exception e)
                     {
